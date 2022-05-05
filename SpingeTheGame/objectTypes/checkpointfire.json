@@ -1,0 +1,20 @@
+{
+	"name": "CheckpointFire",
+	"plugin-id": "Particles",
+	"sid": 712628319582104,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 1,
+		"height": 1,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 9958158,
+		"useCollisionPoly": true
+	}
+}

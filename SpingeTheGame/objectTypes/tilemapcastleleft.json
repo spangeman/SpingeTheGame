@@ -1,0 +1,27 @@
+{
+	"name": "TilemapCastleLeft",
+	"plugin-id": "Tilemap",
+	"sid": 649561854809410,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 797964688228107
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 368,
+		"height": 224,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8307391,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

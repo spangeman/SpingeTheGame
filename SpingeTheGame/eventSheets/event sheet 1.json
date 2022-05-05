@@ -1,0 +1,1775 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Coins",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 895275532750404
+		},
+		{
+			"eventType": "variable",
+			"name": "currentCP",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 525425191360551
+		},
+		{
+			"eventType": "variable",
+			"name": "currentCPX",
+			"type": "number",
+			"initialValue": "3090",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 730182081034041
+		},
+		{
+			"eventType": "variable",
+			"name": "currentCPY",
+			"type": "number",
+			"initialValue": "1400",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 526169510946431
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerHasBow",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 364187555914018
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 646035470927252,
+							"parameters": {
+								"key": 68
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 619664376841880,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "PlayerSprite",
+							"sid": 681793900456162,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 931064245639029,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "player",
+									"sid": 786472931292960
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "player",
+									"sid": 625932715028598,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 988603704016912
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 727024412011755,
+							"parameters": {
+								"key": 65
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 790712822521382,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "PlayerSprite",
+							"sid": 837585438299412,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 647422990549099,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "player",
+									"sid": 906087766632501,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "player",
+									"sid": 827462952593154,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 819637185513641
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 212917725366277,
+							"parameters": {
+								"key": 83
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 108957502099006,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fall-through",
+							"objectClass": "PlayerSprite",
+							"sid": 777093498887674,
+							"behaviorType": "Platform"
+						}
+					],
+					"sid": 638823751226414,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 206054809725010,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 978334491521587,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 162171625306422,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "PlayerSprite",
+							"sid": 143646907301674,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 193200398525645,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "PlayerSprite",
+							"sid": 596471805515089,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 903972320398825,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "PlayerSprite",
+									"sid": 989103505495853,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 213692843160053,
+									"parameters": {
+										"animation": "\"run\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 608988429206443
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 921462227657255
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 828017472880083,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 681092686878357
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 608972744474643,
+							"parameters": {
+								"key": 65
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 237388428939686,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [],
+					"sid": 454281487647828,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "player",
+									"sid": 471305584595827,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "player",
+									"sid": 226489665337191,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 972818899897226,
+							"disabled": true
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 160839844307316,
+							"parameters": {
+								"key": 68
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 125991384023068,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [],
+					"sid": 475319972900582,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "player",
+									"sid": 744012792646970
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "player",
+									"sid": 591937705855365,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 866157684712167,
+							"disabled": true
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "PlayerSprite",
+							"sid": 938103906729401,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [],
+					"sid": 947972175822471,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 601209558803641
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 402607806599247,
+									"parameters": {
+										"object-to-create": "Dust",
+										"layer": "\"Game\"",
+										"x": "player.ImagePointX(1)",
+										"y": "player.ImagePointY(1)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 861040219411563
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 794305748723203,
+							"parameters": {
+								"key": 17
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 376080019582418,
+							"parameters": {
+								"variable": "PlayerHasBow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 932793263350428,
+							"parameters": {
+								"audio-file": "bow",
+								"loop": "not-looping",
+								"volume": "-25",
+								"tag-optional": "\"bow\""
+							}
+						}
+					],
+					"sid": 819318893364199,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-by-wall",
+									"objectClass": "PlayerSprite",
+									"sid": 176302525490244,
+									"disabled": true,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "PlayerSprite",
+									"sid": 272673638011696,
+									"disabled": true,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 270899191400149,
+									"parameters": {
+										"animation": "\"Shoot\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 754382645685707,
+									"parameters": {
+										"group-name": "\"Player Movement\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 452417621967919,
+									"parameters": {
+										"seconds": "10"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 910043351484779,
+									"parameters": {
+										"group-name": "\"Player Movement\"",
+										"state": "activated"
+									}
+								}
+							],
+							"sid": 785226248491086
+						}
+					]
+				}
+			],
+			"sid": 622234481878258
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "StartUp",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 134454512977200
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "player",
+							"sid": 894621280165741,
+							"parameters": {
+								"object": "PlayerSprite",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player",
+							"sid": 461483752482483,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "PlayerSprite",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 767939845388076,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "180"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Lyve",
+							"sid": 482521085104192,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Linda",
+							"sid": 719811147170427,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite",
+							"sid": 478612061497218,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 390877312122524,
+							"parameters": {
+								"audio-file": "MontyOnTheRun",
+								"loop": "not-looping",
+								"volume": "-40",
+								"tag-optional": "\"MontyOnTheRun\""
+							}
+						}
+					],
+					"sid": 940689370477545
+				}
+			],
+			"sid": 703281891066166
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemies",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 390975846789946,
+							"parameters": {
+								"object": "Wall"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 857715184742623,
+							"parameters": {
+								"instance-variable": "Dir"
+							}
+						}
+					],
+					"sid": 543630697327430,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 987654505530472,
+									"parameters": {
+										"instance-variable": "Dir"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 846443173096797,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "0"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 344610162221867,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 307782564334877
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 758299712972007,
+									"parameters": {
+										"instance-variable": "Dir"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 576191306444444,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "180"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 243679617468919,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 150805267725464
+						}
+					]
+				}
+			],
+			"sid": 857459240290942
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Collisions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 273438363438278,
+							"parameters": {
+								"object": "EnemyBobTheBlob"
+							}
+						},
+						{
+							"id": "is-outside-layout",
+							"objectClass": "PlayerSprite",
+							"sid": 289251195027114
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "player",
+							"sid": 663211145742198
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PlayerSprite",
+							"sid": 139960487625005
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Camera",
+							"sid": 130100835675999
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 202860267017080,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 107065956602746,
+							"parameters": {
+								"object-to-create": "Camera",
+								"layer": "\"Game\"",
+								"x": "currentCPX",
+								"y": "currentCPY",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 918162744317136,
+							"parameters": {
+								"object-to-create": "PlayerSprite",
+								"layer": "\"Game\"",
+								"x": "currentCPX",
+								"y": "currentCPY",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 924654966218418,
+							"parameters": {
+								"object-to-create": "player",
+								"layer": "\"Game\"",
+								"x": "currentCPX",
+								"y": "currentCPY",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerSprite",
+							"sid": 323837193115228,
+							"parameters": {
+								"instance-variable": "Coins",
+								"value": "Coins"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "player",
+							"sid": 624540483380111,
+							"parameters": {
+								"object": "PlayerSprite",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "player",
+							"sid": 286736426660148,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "PlayerSprite",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 865819443750366,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 271742971765135,
+							"parameters": {
+								"object": "CoinSprite"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "CoinSprite",
+							"sid": 787436859458384
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "PlayerSprite",
+							"sid": 851499448102425,
+							"parameters": {
+								"instance-variable": "Coins",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 601567234235282,
+							"parameters": {
+								"variable": "Coins",
+								"value": "PlayerSprite.Coins"
+							}
+						}
+					],
+					"sid": 573622333511503
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 408789875227574,
+							"parameters": {
+								"object": "CheckPoint"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "CheckPoint",
+							"sid": 285474185890863,
+							"parameters": {
+								"instance-variable": "Checked",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 215684276226987,
+							"parameters": {
+								"variable": "currentCP",
+								"value": "CheckPoint.Number"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 629639915313815,
+							"parameters": {
+								"variable": "currentCPX",
+								"value": "CheckPoint.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 743602352930521,
+							"parameters": {
+								"variable": "currentCPY",
+								"value": "CheckPoint.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "CheckpointFire",
+							"sid": 713679193768117,
+							"parameters": {
+								"x": "CheckPoint.X",
+								"y": "CheckPoint.Y"
+							}
+						}
+					],
+					"sid": 727409972736320
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 300284417720871,
+							"parameters": {
+								"object": "CastleLeftDoor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 908918454922552,
+							"parameters": {
+								"layout": "OuterCastleLeft"
+							}
+						}
+					],
+					"sid": 893114747083494
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 941527915170926,
+							"parameters": {
+								"object": "CastleLeftDoorBack"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 695218773538002,
+							"parameters": {
+								"layout": "Castle"
+							}
+						}
+					],
+					"sid": 362406356732842
+				}
+			],
+			"sid": 598859708397527
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Shoot Arrow",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "player",
+							"sid": 871414947034386,
+							"parameters": {
+								"animation": "\"Shoot\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 747171501772948,
+							"parameters": {
+								"group-name": "\"Player Movement\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 652969432813328
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "while",
+							"objectClass": "System",
+							"sid": 431377310679766
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "BowPoint",
+							"sid": 277481670698437,
+							"parameters": {
+								"object": "TilemapCastle"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "BowPoint",
+							"sid": 426924634217988,
+							"parameters": {
+								"object": "EnemyBobTheBlob"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "BowPoint",
+							"sid": 698364625954099,
+							"parameters": {
+								"object": "DestWall"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-outside-layout",
+							"objectClass": "BowPoint",
+							"sid": 449037540418150,
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 792117200508742,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "player",
+									"sid": 136128505401968
+								}
+							],
+							"actions": [
+								{
+									"id": "move-forward",
+									"objectClass": "BowPoint",
+									"sid": 271339113906556,
+									"parameters": {
+										"distance": "-1"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "BowLine",
+									"sid": 920702998144254,
+									"parameters": {
+										"width": "distance(Self.X, Self.Y, BowPoint.X, BowPoint.Y)*-1"
+									}
+								}
+							],
+							"sid": 294685596693876
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 671304068714740
+								}
+							],
+							"actions": [
+								{
+									"id": "move-forward",
+									"objectClass": "BowPoint",
+									"sid": 766253023591752,
+									"parameters": {
+										"distance": "1"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "BowLine",
+									"sid": 418693718796078,
+									"parameters": {
+										"width": "distance(Self.X, Self.Y, BowPoint.X, BowPoint.Y)"
+									}
+								}
+							],
+							"sid": 287268165451606
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "BowPoint",
+							"sid": 168514599420957,
+							"parameters": {
+								"object": "TilemapCastle"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "BowPoint",
+							"sid": 248186620908503,
+							"parameters": {
+								"object": "EnemyBobTheBlob"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "BowPoint",
+							"sid": 468047691557739,
+							"parameters": {
+								"object": "DestWall"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 859273831210561,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 516970687003381
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "BowPoint",
+									"sid": 171385163812166,
+									"parameters": {
+										"object": "BowArrow",
+										"layer": "\"Game\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "BowPoint",
+									"sid": 744283031467400
+								}
+							],
+							"sid": 804628955775320,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-mirrored",
+											"objectClass": "player",
+											"sid": 867198421589900
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "BowArrow",
+											"sid": 546279343941389,
+											"parameters": {
+												"state": "mirrored"
+											}
+										}
+									],
+									"sid": 822142209691306
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 709985765025827
+										}
+									],
+									"actions": [
+										{
+											"id": "set-mirrored",
+											"objectClass": "BowArrow",
+											"sid": 927143387012567,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										}
+									],
+									"sid": 301029203324444
+								}
+							]
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "player",
+							"sid": 396127715520909,
+							"parameters": {
+								"animation": "\"Shoot\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 423509045501741,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "player",
+									"sid": 411405908369816,
+									"parameters": {
+										"comparison": 0,
+										"number": "2"
+									}
+								},
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 252732546175300
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "player",
+									"sid": 683632105628333,
+									"parameters": {
+										"object": "BowLine",
+										"layer": "\"Game\"",
+										"image-point": "\"Arrow\"",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "player",
+									"sid": 189094743883217,
+									"parameters": {
+										"object": "BowPoint",
+										"layer": "\"Game\"",
+										"image-point": "\"Arrow\"",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 563407297305217
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "BowArrow",
+							"sid": 845334600981258
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 521493085840609,
+							"parameters": {
+								"seconds": "0.4"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "BowArrow",
+							"sid": 260720851799731,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "BowArrow",
+							"sid": 114919911140483,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 830954931839726
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 717102515762581,
+							"parameters": {
+								"object": "BowArrow"
+							}
+						},
+						{
+							"id": "is-active",
+							"objectClass": "BowArrow",
+							"sid": 147968754757869,
+							"behaviorType": "Sine"
+						}
+					],
+					"actions": [],
+					"sid": 423958357314483,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 411762736555593
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 595527773076719,
+									"parameters": {
+										"instance-variable": "HP",
+										"value": "1"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 454578162184595,
+									"parameters": {
+										"object-to-create": "Dust",
+										"layer": "\"Game\"",
+										"x": "EnemyBobTheBlob.X",
+										"y": "EnemyBobTheBlob.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 340670239647255,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "BowArrow",
+									"sid": 238010163548504
+								}
+							],
+							"sid": 439045472352803
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 576995642091637,
+							"parameters": {
+								"object": "BowArrow"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 297341802347481,
+							"parameters": {
+								"instance-variable": "HP",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "EnemyBobTheBlob",
+							"sid": 486980692972728
+						}
+					],
+					"sid": 728941999162045,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "EnemyBobTheBlob",
+									"sid": 440349742317675
+								}
+							],
+							"sid": 483725384950500
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "DestWall",
+							"sid": 855694611131571,
+							"parameters": {
+								"object": "BowArrow"
+							}
+						},
+						{
+							"id": "is-active",
+							"objectClass": "BowArrow",
+							"sid": 370762513993467,
+							"behaviorType": "Sine"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "DestWall",
+							"sid": 634774805274139
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 741069249855759,
+							"parameters": {
+								"object-to-create": "Dust",
+								"layer": "\"Game\"",
+								"x": "DestWall.X",
+								"y": "DestWall.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 854291160629712,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BowArrow",
+							"sid": 280871539525945
+						}
+					],
+					"sid": 390228458768881
+				}
+			],
+			"sid": 515651735324003
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player Interactions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 880995285170369,
+							"parameters": {
+								"key": 77
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 636165501295358,
+							"parameters": {
+								"tag": "\"MontyOnTheRun\"",
+								"state": "muted"
+							}
+						}
+					],
+					"sid": 974540771346162
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 799678657506305,
+							"parameters": {
+								"key": 76
+							}
+						}
+					],
+					"actions": [],
+					"sid": 271259519752284
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 333056763268628,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 136970064957017,
+							"parameters": {
+								"object": "InvItem"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "InfoBox",
+							"sid": 171175933471455,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 405747709187490,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "InvItem",
+							"sid": 386558009353392
+						},
+						{
+							"id": "set-text",
+							"objectClass": "InfoBox",
+							"sid": 145880167368667,
+							"parameters": {
+								"text": "InvItem.PickUpMessage"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PlayerSprite",
+							"sid": 975131019714899,
+							"parameters": {
+								"instance-variable": "LastInventoryItemPickedUp",
+								"value": "InvItem.InvItemName"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 687743674078525,
+							"parameters": {
+								"time-scale": "0.005"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 339449553241577,
+							"parameters": {
+								"seconds": "0.005"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 635954585532648,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 108010570607791,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 247061633703389,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerSprite",
+									"sid": 954843102561494,
+									"parameters": {
+										"instance-variable": "LastInventoryItemPickedUp",
+										"comparison": 0,
+										"value": "\"Bow\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 655360765097466,
+									"parameters": {
+										"variable": "PlayerHasBow",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerSprite",
+									"sid": 651284157268476,
+									"parameters": {
+										"instance-variable": "LastInventoryItemPickedUp",
+										"value": "\"\""
+									}
+								}
+							],
+							"sid": 378562869949909
+						}
+					]
+				}
+			],
+			"sid": 398657219886330
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 834145499593557
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Camera",
+					"sid": 427831766707476,
+					"parameters": {
+						"x": "lerp(Self.X, Player.X, 0.03)",
+						"y": "lerp(Self.Y, Player.Y, 0.03)"
+					}
+				}
+			],
+			"sid": 723237182239482
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 265297813473391
+				},
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "CoinUI",
+					"sid": 539698430157142,
+					"disabled": true,
+					"parameters": {
+						"unique-id": "21"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "CoinUI",
+					"sid": 543603310121456,
+					"parameters": {
+						"text": "PlayerSprite.Coins"
+					}
+				}
+			],
+			"sid": 352823834931064
+		}
+	],
+	"sid": 906989763335380
+}

@@ -1,0 +1,147 @@
+{
+	"name": "Sprite",
+	"plugin-id": "Sprite",
+	"sid": 788324243719536,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 395613716971297
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2464268,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.4375,
+								0.5,
+								0.46875,
+								0.59375,
+								0.5,
+								0.625,
+								0.625,
+								0.5,
+								0.96875,
+								0.3125,
+								0.65625,
+								0.34375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 663438,
+						"collisionPoly": {
+							"points": [
+								0.53125,
+								0.53125,
+								0.5,
+								0.53125,
+								0.4375,
+								0.53125,
+								0.625,
+								0.625,
+								0.5,
+								0.96875,
+								0.3125,
+								0.65625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 445607,
+						"collisionPoly": {
+							"points": [
+								0.5625,
+								0.5625,
+								0.5,
+								0.5625,
+								0.40625,
+								0.5625,
+								0.65625,
+								0.65625,
+								0.5,
+								0.96875,
+								0.3125,
+								0.65625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1157180,
+						"collisionPoly": {
+							"points": [
+								0.53125,
+								0.53125,
+								0.5,
+								0.53125,
+								0.4375,
+								0.53125,
+								0.625,
+								0.625,
+								0.5,
+								0.96875,
+								0.3125,
+								0.65625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 863476874272584,
+				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

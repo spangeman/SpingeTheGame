@@ -1,0 +1,18 @@
+1. Inventory from other proj?
+2. Awesome background effect
+3. stages / levels transition
+4. Organise stuff in project
+5. Health
+ 
+
+Jump on bow
+
+temp bow upgrades to kill them in less hits - coloured bows
+3 Lives - collectable heats for more lives
+Animated grass
+Level boss?
+
+
+Bug list
+Blob farts when I shoot a destroyable wall
+Moonwalking after shooting my arrow

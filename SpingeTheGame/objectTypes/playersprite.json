@@ -1,0 +1,62 @@
+{
+	"name": "PlayerSprite",
+	"plugin-id": "Sprite",
+	"sid": 994677986548108,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Coins",
+			"type": "number",
+			"desc": "",
+			"sid": 185296535770136
+		},
+		{
+			"name": "HasBow",
+			"type": "boolean",
+			"desc": "",
+			"sid": 805614657109665
+		},
+		{
+			"name": "LastInventoryItemPickedUp",
+			"type": "string",
+			"desc": "",
+			"sid": 171642325142250
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 925588967840733
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1244963,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 221017510148067,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

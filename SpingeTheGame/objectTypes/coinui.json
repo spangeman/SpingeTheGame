@@ -1,0 +1,26 @@
+{
+	"name": "CoinUI",
+	"plugin-id": "Spritefont2",
+	"sid": 438432398708571,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 957851688501460
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 64,
+		"height": 128,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3449480,
+		"useCollisionPoly": true
+	}
+}

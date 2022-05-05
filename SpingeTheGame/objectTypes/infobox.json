@@ -1,0 +1,26 @@
+{
+	"name": "InfoBox",
+	"plugin-id": "Spritefont2",
+	"sid": 878348404546595,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 400787265368205
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 64,
+		"height": 128,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 2502069,
+		"useCollisionPoly": true
+	}
+}
