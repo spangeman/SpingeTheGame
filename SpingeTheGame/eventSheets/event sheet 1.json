@@ -483,30 +483,7 @@
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-by-wall",
-									"objectClass": "PlayerSprite",
-									"sid": 176302525490244,
-									"disabled": true,
-									"behaviorType": "Platform",
-									"parameters": {
-										"side": "left"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "is-by-wall",
-									"objectClass": "PlayerSprite",
-									"sid": 272673638011696,
-									"disabled": true,
-									"behaviorType": "Platform",
-									"parameters": {
-										"side": "right"
-									},
-									"isInverted": true
-								}
-							],
+							"conditions": [],
 							"actions": [
 								{
 									"id": "set-animation",
