@@ -747,6 +747,14 @@
 							"id": "is-outside-layout",
 							"objectClass": "PlayerSprite",
 							"sid": 289251195027114
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 389066542126059,
+							"parameters": {
+								"object": "GreenGooDeath"
+							}
 						}
 					],
 					"actions": [
