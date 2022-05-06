@@ -493,7 +493,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "Crazeh",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",

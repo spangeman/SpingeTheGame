@@ -598,7 +598,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Sprite",
+							"objectClass": "Crazeh",
 							"sid": 478612061497218,
 							"parameters": {
 								"animation": "\"Idle\"",
