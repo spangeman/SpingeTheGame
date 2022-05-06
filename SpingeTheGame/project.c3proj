@@ -146,7 +146,14 @@
 	"uniqueId": "4o12rwz5b3j",
 	"objectTypes": {
 		"items": [
-			"GreenGooDeath"
+			"GreenGooDeath",
+			"InvRedThing",
+			"InvGreenThing",
+			"InvBlueThing",
+			"Inventory",
+			"InventoryBox",
+			"InvPurpleThing",
+			"InvYellowThing"
 		],
 		"subfolders": [
 			{
@@ -251,7 +258,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"InventoryItems"
+		],
 		"subfolders": []
 	},
 	"layouts": {

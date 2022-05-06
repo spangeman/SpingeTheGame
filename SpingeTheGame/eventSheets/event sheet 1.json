@@ -627,6 +627,7 @@
 							"id": "play",
 							"objectClass": "Audio",
 							"sid": 390877312122524,
+							"disabled": true,
 							"parameters": {
 								"audio-file": "MontyOnTheRun",
 								"loop": "not-looping",
@@ -1717,9 +1718,716 @@
 							"sid": 378562869949909
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 285742079833539,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 145131240951732,
+							"parameters": {
+								"object": "InventoryItems"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "AddToInventory",
+							"sid": 121401397823498,
+							"parameters": [
+								"InventoryItems.Name"
+							]
+						},
+						{
+							"id": "destroy",
+							"objectClass": "InventoryItems",
+							"sid": 811670027444417
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 180865488889093,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"callFunction": "SetInventoryNumber",
+							"sid": 685011115238746,
+							"parameters": [
+								"InventoryItems.Name"
+							]
+						}
+					],
+					"sid": 632144035779809
 				}
 			],
 			"sid": 398657219886330
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Inventory",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Loop through the inventory boxes until we find one that is empty, set it's HasValue to true and create the inventory item in the box. The parameter tells us which object to create."
+				},
+				{
+					"functionName": "AddToInventory",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Parameter0",
+							"type": "string",
+							"initialValue": "\"\"",
+							"comment": "",
+							"sid": 984148521818308
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 670044616020403,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "OnlyOnce",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 561378812993994
+						},
+						{
+							"eventType": "variable",
+							"name": "OnlyOnce2",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 904191091409174
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 807914036046238,
+									"parameters": {
+										"object": "InventoryBox"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "InventoryBox",
+									"sid": 819069400513607,
+									"parameters": {
+										"instance-variable": "HasItem"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 990378552663579,
+									"parameters": {
+										"variable": "OnlyOnce"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 579134822125291,
+									"parameters": {
+										"variable": "OnlyOnce",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "InventoryBox",
+									"sid": 110660261793742,
+									"parameters": {
+										"instance-variable": "HasItem",
+										"value": "true"
+									}
+								},
+								{
+									"id": "create-object-by-name",
+									"objectClass": "System",
+									"sid": 789723968000041,
+									"parameters": {
+										"object-name": "Parameter0",
+										"layer": "2",
+										"x": "InventoryBox.X",
+										"y": "InventoryBox.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 817786933012455
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Loop through the inventory items until we find one that is touching an InventoryBox but has no CurrentInvSlot number, set the number."
+				},
+				{
+					"functionName": "SetInventoryNumber",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Parameter0",
+							"type": "string",
+							"initialValue": "\"\"",
+							"comment": "",
+							"sid": 267044247123791
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 873312530885963,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "OnlyOnce",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 845528309827314
+						},
+						{
+							"eventType": "variable",
+							"name": "OnlyOnce2",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 460470531732157
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 203373480322828,
+									"parameters": {
+										"object": "InventoryItems"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "InventoryItems",
+									"sid": 561937196972475,
+									"parameters": {
+										"object": "InventoryBox"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InventoryItems",
+									"sid": 372154849310102,
+									"parameters": {
+										"instance-variable": "CurrentInvSlot",
+										"comparison": 0,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 284991132400970,
+									"parameters": {
+										"variable": "OnlyOnce2"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 180033166606527,
+									"parameters": {
+										"variable": "OnlyOnce2",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "InventoryItems",
+									"sid": 986451888920274,
+									"parameters": {
+										"instance-variable": "CurrentInvSlot",
+										"value": "InventoryBox.Number"
+									}
+								}
+							],
+							"sid": 775902033896811
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Loop through inventory items until we find one that is touching an InventoryBox and that box number matches the parameter. Destroy the object."
+				},
+				{
+					"functionName": "RemoveFromInventory",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Parameter0",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 225342105227105
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 576194883870362,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "OnlyOnce",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 160913124374178
+						},
+						{
+							"eventType": "variable",
+							"name": "ItemNameToCreate",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 766434864101627
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 841805600175086,
+									"parameters": {
+										"object": "InventoryItems"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "InventoryItems",
+									"sid": 883365580820108,
+									"parameters": {
+										"object": "InventoryBox"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InventoryItems",
+									"sid": 734374373549827,
+									"parameters": {
+										"instance-variable": "CurrentInvSlot",
+										"comparison": 0,
+										"value": "Parameter0"
+									}
+								},
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 563476857695415,
+									"parameters": {
+										"variable": "OnlyOnce"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 637477014219346,
+									"parameters": {
+										"variable": "OnlyOnce",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "InventoryBox",
+									"sid": 120895590190038,
+									"parameters": {
+										"instance-variable": "HasItem",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 566307158962184,
+									"parameters": {
+										"variable": "ItemNameToCreate",
+										"value": "InventoryItems.Name"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "InventoryItems",
+									"sid": 465996342201201
+								},
+								{
+									"id": "create-object-by-name",
+									"objectClass": "System",
+									"sid": 664907789880296,
+									"parameters": {
+										"object-name": "ItemNameToCreate",
+										"layer": "1",
+										"x": "PlayerSprite.X",
+										"y": "PlayerSprite.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								}
+							],
+							"sid": 628674730493373
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 909503488237215
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 168546556105341,
+							"parameters": {
+								"key": 49
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 158059605410038,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 295557522401763,
+							"parameters": [
+								"1"
+							]
+						}
+					],
+					"sid": 282372951609956
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 649245717995412,
+							"parameters": {
+								"key": 50
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 758873081109541,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 385086664764254,
+							"parameters": [
+								"2"
+							]
+						}
+					],
+					"sid": 376721656274802
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 622734379456761,
+							"parameters": {
+								"key": 51
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 572447687470025,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 385890706726357,
+							"parameters": [
+								"3"
+							]
+						}
+					],
+					"sid": 470667848062922
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 703229719591971,
+							"parameters": {
+								"key": 52
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 392197394172893,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 450886139939925,
+							"parameters": [
+								"4"
+							]
+						}
+					],
+					"sid": 779146051847976
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 502982012288905,
+							"parameters": {
+								"key": 53
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 944162823604908,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 475129366317884,
+							"parameters": [
+								"5"
+							]
+						}
+					],
+					"sid": 478771382167051
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 290573683084095,
+							"parameters": {
+								"key": 54
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 595261298860729,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 947142199164409,
+							"parameters": [
+								"6"
+							]
+						}
+					],
+					"sid": 109476869982993
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 518306631416517,
+							"parameters": {
+								"key": 55
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 643543800165685,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 313828240297736,
+							"parameters": [
+								"7"
+							]
+						}
+					],
+					"sid": 711922529095692
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 974228227433175,
+							"parameters": {
+								"key": 56
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 892099146697138,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 849676456738140,
+							"parameters": [
+								"8"
+							]
+						}
+					],
+					"sid": 903560773068861
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 975308166599196,
+							"parameters": {
+								"key": 57
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 495504851184060,
+							"parameters": {
+								"object": "InventoryItems"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "RemoveFromInventory",
+							"sid": 389847240320372,
+							"parameters": [
+								"9"
+							]
+						}
+					],
+					"sid": 962192572572377
+				}
+			],
+			"sid": 429762457913444
 		},
 		{
 			"eventType": "block",

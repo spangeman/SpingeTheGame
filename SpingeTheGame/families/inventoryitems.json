@@ -1,0 +1,28 @@
+{
+	"name": "InventoryItems",
+	"plugin-id": "Sprite",
+	"sid": 530915706229981,
+	"instanceVariables": [
+		{
+			"name": "Name",
+			"type": "string",
+			"desc": "",
+			"sid": 521936146819652
+		},
+		{
+			"name": "CurrentInvSlot",
+			"type": "number",
+			"desc": "",
+			"sid": 309355457395071
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"InvBlueThing",
+		"InvGreenThing",
+		"InvRedThing",
+		"InvPurpleThing",
+		"InvYellowThing"
+	]
+}
