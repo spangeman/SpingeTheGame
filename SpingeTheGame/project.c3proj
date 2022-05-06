@@ -151,10 +151,12 @@
 		"subfolders": [
 			{
 				"items": [
-					"Lyve",
+					"Kyve",
 					"Linda",
 					"EnemyBobTheBlob",
-					"Crazeh"
+					"Crazeh",
+					"Lyve",
+					"Sumz"
 				],
 				"subfolders": [],
 				"name": "NPCs"
@@ -162,7 +164,8 @@
 			{
 				"items": [
 					"TilemapCastle",
-					"TilemapCastleLeft"
+					"TilemapCastleLeft",
+					"TilemapCastleMore"
 				],
 				"subfolders": [],
 				"name": "Tilemaps"

@@ -580,7 +580,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Lyve",
+							"objectClass": "Kyve",
 							"sid": 482521085104192,
 							"parameters": {
 								"animation": "\"Idle\"",
@@ -600,6 +600,24 @@
 							"id": "set-animation",
 							"objectClass": "Crazeh",
 							"sid": 478612061497218,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Lyve",
+							"sid": 846587398630840,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sumz",
+							"sid": 288259981357690,
 							"parameters": {
 								"animation": "\"Idle\"",
 								"from": "beginning"

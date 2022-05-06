@@ -564,6 +564,47 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "InvItem",
+					"properties": {
+						"text": "HI SPINGE",
+						"enable-bbcode": true,
+						"character-width": 7,
+						"character-height": 9,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "bottom-left"
+					},
+					"uid": 95,
+					"instanceVariables": {
+						"InvItemName": "CrazehSomething",
+						"PickUpMessage": "HI CRAZEH"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 716.8976439506239,
+						"y": 970.0086838588794,
+						"width": 74.42611330210102,
+						"height": 12.590513558457815,
+						"originX": 0,
+						"originY": 1,
+						"color": [
+							0.9803921568627451,
+							0.9803921568627451,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 232991963863227,
@@ -627,8 +668,8 @@
 						}
 					},
 					"world": {
-						"x": 12.935252809082783,
-						"y": 10.470445625353335,
+						"x": 11.580536048606405,
+						"y": 60.595723723578004,
 						"width": 307.142131600604,
 						"height": 168.0926240791207,
 						"originX": 0,
