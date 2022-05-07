@@ -45,11 +45,11 @@
 			"eventType": "variable",
 			"name": "PlayerHasBow",
 			"type": "boolean",
-			"initialValue": "false",
+			"initialValue": "true",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 364187555914018
+			"sid": 772224319594048
 		},
 		{
 			"eventType": "group",
@@ -1603,10 +1603,19 @@
 						{
 							"id": "is-overlapping-another-object",
 							"objectClass": "PlayerSprite",
-							"sid": 136970064957017,
+							"sid": 344563353484653,
 							"parameters": {
-								"object": "InvItem"
+								"object": "NPCs"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NPCs",
+							"sid": 775939397179712,
+							"parameters": {
+								"instance-variable": "HasRequiredItem"
+							},
+							"isInverted": true
 						},
 						{
 							"id": "is-visible",
@@ -1625,25 +1634,19 @@
 							}
 						},
 						{
-							"id": "destroy",
-							"objectClass": "InvItem",
-							"sid": 386558009353392
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 700442047447489,
+							"parameters": {
+								"visibility": "visible"
+							}
 						},
 						{
 							"id": "set-text",
 							"objectClass": "InfoBox",
-							"sid": 145880167368667,
+							"sid": 776339103569396,
 							"parameters": {
-								"text": "InvItem.PickUpMessage"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "PlayerSprite",
-							"sid": 975131019714899,
-							"parameters": {
-								"instance-variable": "LastInventoryItemPickedUp",
-								"value": "InvItem.InvItemName"
+								"text": "NPCs.DialogueText"
 							}
 						},
 						{
@@ -1657,9 +1660,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 339449553241577,
+							"sid": 266049305696458,
 							"parameters": {
-								"seconds": "0.005"
+								"seconds": "0.009"
 							}
 						},
 						{
@@ -1672,6 +1675,14 @@
 						},
 						{
 							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 713386634439040,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
 							"objectClass": "InfoBox",
 							"sid": 108010570607791,
 							"parameters": {
@@ -1679,45 +1690,109 @@
 							}
 						}
 					],
-					"sid": 247061633703389,
-					"children": [
+					"sid": 247061633703389
+				},
+				{
+					"eventType": "block",
+					"conditions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "PlayerSprite",
-									"sid": 954843102561494,
-									"parameters": {
-										"instance-variable": "LastInventoryItemPickedUp",
-										"comparison": 0,
-										"value": "\"Bow\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 655360765097466,
-									"parameters": {
-										"variable": "PlayerHasBow",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "PlayerSprite",
-									"sid": 651284157268476,
-									"parameters": {
-										"instance-variable": "LastInventoryItemPickedUp",
-										"value": "\"\""
-									}
-								}
-							],
-							"sid": 378562869949909
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 119367101376066,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 697115281049063,
+							"parameters": {
+								"object": "NPCs"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NPCs",
+							"sid": 609568982721305,
+							"parameters": {
+								"instance-variable": "HasRequiredItem"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "InfoBox",
+							"sid": 686496270121420,
+							"isInverted": true
 						}
-					]
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 923262770401278,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 911391399934031,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "InfoBox",
+							"sid": 771976954561411,
+							"parameters": {
+								"text": "NPCs.HasRequiredItemDialogueText"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 962543251504728,
+							"parameters": {
+								"time-scale": "0.005"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 359896843889705,
+							"parameters": {
+								"seconds": "0.009"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 822554027986532,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 247252132759861,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 342208371224955,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 449161023528133
 				},
 				{
 					"eventType": "block",
@@ -2046,95 +2121,294 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 841805600175086,
+									"id": "is-overlapping-another-object",
+									"objectClass": "PlayerSprite",
+									"sid": 477239397159141,
 									"parameters": {
 										"object": "InventoryItems"
-									}
+									},
+									"isInverted": true
 								},
 								{
 									"id": "is-overlapping-another-object",
-									"objectClass": "InventoryItems",
-									"sid": 883365580820108,
+									"objectClass": "PlayerSprite",
+									"sid": 683598003593317,
 									"parameters": {
-										"object": "InventoryBox"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "InventoryItems",
-									"sid": 734374373549827,
-									"parameters": {
-										"instance-variable": "CurrentInvSlot",
-										"comparison": 0,
-										"value": "Parameter0"
-									}
-								},
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 563476857695415,
-									"parameters": {
-										"variable": "OnlyOnce"
+										"object": "NPCs"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "PlayerSprite",
+									"sid": 304432010733699,
+									"behaviorType": "Platform"
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 992022836361879,
+							"children": [
 								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 637477014219346,
-									"parameters": {
-										"variable": "OnlyOnce",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "InventoryBox",
-									"sid": 120895590190038,
-									"parameters": {
-										"instance-variable": "HasItem",
-										"value": "false"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 566307158962184,
-									"parameters": {
-										"variable": "ItemNameToCreate",
-										"value": "InventoryItems.Name"
-									}
-								},
-								{
-									"id": "destroy",
-									"objectClass": "InventoryItems",
-									"sid": 465996342201201
-								},
-								{
-									"id": "create-object-by-name",
-									"objectClass": "System",
-									"sid": 664907789880296,
-									"parameters": {
-										"object-name": "ItemNameToCreate",
-										"layer": "1",
-										"x": "PlayerSprite.X",
-										"y": "PlayerSprite.Y",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 113416471740617,
+											"parameters": {
+												"object": "InventoryItems"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "InventoryItems",
+											"sid": 103983188711871,
+											"parameters": {
+												"object": "InventoryBox"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "InventoryItems",
+											"sid": 998326812471718,
+											"parameters": {
+												"instance-variable": "CurrentInvSlot",
+												"comparison": 0,
+												"value": "Parameter0"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 817579246072801,
+											"parameters": {
+												"variable": "OnlyOnce"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 597161507713720,
+											"parameters": {
+												"variable": "OnlyOnce",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "InventoryBox",
+											"sid": 540801049486065,
+											"parameters": {
+												"instance-variable": "HasItem",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 872977113470072,
+											"parameters": {
+												"variable": "ItemNameToCreate",
+												"value": "InventoryItems.Name"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "InventoryItems",
+											"sid": 859919460652247
+										},
+										{
+											"id": "create-object-by-name",
+											"objectClass": "System",
+											"sid": 701705294950266,
+											"parameters": {
+												"object-name": "ItemNameToCreate",
+												"layer": "1",
+												"x": "PlayerSprite.X",
+												"y": "PlayerSprite.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 843421734832650
 								}
-							],
-							"sid": 628674730493373
+							]
+						}
+					]
+				},
+				{
+					"functionName": "UseItemOnNPC",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Parameter0",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 219661446326001
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 700788709338521,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "OnlyOnce",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 849819248579451
+						},
+						{
+							"eventType": "variable",
+							"name": "ItemToUse",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 831348078774721
 						},
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PlayerSprite",
+									"sid": 311302863322852,
+									"parameters": {
+										"object": "InventoryItems"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PlayerSprite",
+									"sid": 963447290418549,
+									"parameters": {
+										"object": "NPCs"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "PlayerSprite",
+									"sid": 903945970731377,
+									"behaviorType": "Platform"
+								}
+							],
 							"actions": [],
-							"sid": 909503488237215
+							"sid": 177887384517359,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 671140250869424,
+											"parameters": {
+												"object": "InventoryItems"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "InventoryItems",
+											"sid": 659675623077675,
+											"parameters": {
+												"object": "InventoryBox"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "InventoryItems",
+											"sid": 792694318928702,
+											"parameters": {
+												"instance-variable": "CurrentInvSlot",
+												"comparison": 0,
+												"value": "Parameter0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "InventoryItems",
+											"sid": 351984902279946,
+											"parameters": {
+												"instance-variable": "Name",
+												"comparison": 0,
+												"value": "NPCs.RequiredItem"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 713273744230847,
+											"parameters": {
+												"variable": "OnlyOnce"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 867870914022928,
+											"parameters": {
+												"variable": "OnlyOnce",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "InventoryBox",
+											"sid": 307871129314720,
+											"parameters": {
+												"instance-variable": "HasItem",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 396307514006733,
+											"parameters": {
+												"variable": "ItemToUse",
+												"value": "InventoryItems.Name"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "InventoryItems",
+											"sid": 901799748245950
+										},
+										{
+											"id": "create-object-by-name",
+											"objectClass": "System",
+											"sid": 179904259484264,
+											"parameters": {
+												"object-name": "ItemToUse",
+												"layer": "1",
+												"x": "PlayerSprite.X",
+												"y": "PlayerSprite.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 312314265650360
+								}
+							]
 						}
 					]
 				},
@@ -2148,21 +2422,19 @@
 							"parameters": {
 								"key": 49
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 158059605410038,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 295557522401763,
+							"parameters": [
+								"1"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 222429376929838,
 							"parameters": [
 								"1"
 							]
@@ -2180,21 +2452,19 @@
 							"parameters": {
 								"key": 50
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 758873081109541,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 385086664764254,
+							"parameters": [
+								"2"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 714994246245601,
 							"parameters": [
 								"2"
 							]
@@ -2212,21 +2482,19 @@
 							"parameters": {
 								"key": 51
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 572447687470025,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 385890706726357,
+							"parameters": [
+								"3"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 236514162851275,
 							"parameters": [
 								"3"
 							]
@@ -2244,21 +2512,19 @@
 							"parameters": {
 								"key": 52
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 392197394172893,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 450886139939925,
+							"parameters": [
+								"4"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 956836401513864,
 							"parameters": [
 								"4"
 							]
@@ -2276,21 +2542,19 @@
 							"parameters": {
 								"key": 53
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 944162823604908,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 475129366317884,
+							"parameters": [
+								"5"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 459016044004121,
 							"parameters": [
 								"5"
 							]
@@ -2308,21 +2572,19 @@
 							"parameters": {
 								"key": 54
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 595261298860729,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 947142199164409,
+							"parameters": [
+								"6"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 241241726187482,
 							"parameters": [
 								"6"
 							]
@@ -2340,21 +2602,19 @@
 							"parameters": {
 								"key": 55
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 643543800165685,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 313828240297736,
+							"parameters": [
+								"7"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 225679369640035,
 							"parameters": [
 								"7"
 							]
@@ -2372,21 +2632,19 @@
 							"parameters": {
 								"key": 56
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 892099146697138,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 849676456738140,
+							"parameters": [
+								"8"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 990309626910967,
 							"parameters": [
 								"8"
 							]
@@ -2404,21 +2662,19 @@
 							"parameters": {
 								"key": 57
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 495504851184060,
-							"parameters": {
-								"object": "InventoryItems"
-							},
-							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"callFunction": "RemoveFromInventory",
 							"sid": 389847240320372,
+							"parameters": [
+								"9"
+							]
+						},
+						{
+							"callFunction": "UseItemOnNPC",
+							"sid": 822118820919111,
 							"parameters": [
 								"9"
 							]
@@ -2480,6 +2736,134 @@
 				}
 			],
 			"sid": 352823834931064
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "InventoryItems",
+					"sid": 790161470607997
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "InventoryItems",
+					"sid": 180276037591365,
+					"parameters": {
+						"object": "NPCs"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBox",
+					"sid": 822302663668240,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBoxBackground",
+					"sid": 120345645963751,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "InfoBox",
+					"sid": 217582660053769,
+					"parameters": {
+						"text": "NPCs.ThankYouDialogue"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 838866609740424,
+					"parameters": {
+						"time-scale": "0.005"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 922209087717997,
+					"parameters": {
+						"seconds": "0.009"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 515059238358929,
+					"parameters": {
+						"time-scale": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "NPCs",
+					"sid": 110880158520019,
+					"parameters": {
+						"instance-variable": "HasRequiredItem",
+						"value": "true"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "InventoryItems",
+					"sid": 406656483342426
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBoxBackground",
+					"sid": 516229933066513,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBox",
+					"sid": 195297445672128,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 241129818830399
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerSprite",
+					"sid": 794762520719946,
+					"parameters": {
+						"object": "HiddenWall1"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Kyve",
+					"sid": 409433582195472,
+					"parameters": {
+						"instance-variable": "HasRequiredItem"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "HiddenWall1",
+					"sid": 147782490206183
+				}
+			],
+			"sid": 801669335717353
 		}
 	],
 	"sid": 906989763335380

@@ -147,13 +147,7 @@
 	"objectTypes": {
 		"items": [
 			"GreenGooDeath",
-			"InvRedThing",
-			"InvGreenThing",
-			"InvBlueThing",
-			"Inventory",
-			"InventoryBox",
-			"InvPurpleThing",
-			"InvYellowThing"
+			"HiddenWall1"
 		],
 		"subfolders": [
 			{
@@ -204,7 +198,8 @@
 				"items": [
 					"CoinUI",
 					"InfoBox",
-					"WelcomeText"
+					"WelcomeText",
+					"InfoBoxBackground"
 				],
 				"subfolders": [],
 				"name": "UI"
@@ -232,7 +227,14 @@
 			{
 				"items": [
 					"InvetoryItem",
-					"InvItem"
+					"InvItem",
+					"InvBlueThing",
+					"Inventory",
+					"InventoryBox",
+					"InvGreenThing",
+					"InvPurpleThing",
+					"InvRedThing",
+					"InvYellowThing"
 				],
 				"subfolders": [],
 				"name": "Inventory"
@@ -259,7 +261,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"InventoryItems"
+			"InventoryItems",
+			"NPCs"
 		],
 		"subfolders": []
 	},

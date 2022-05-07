@@ -1,0 +1,46 @@
+{
+	"name": "NPCs",
+	"plugin-id": "Sprite",
+	"sid": 455815053445574,
+	"instanceVariables": [
+		{
+			"name": "DialogueText",
+			"type": "string",
+			"desc": "",
+			"sid": 451001258837745
+		},
+		{
+			"name": "RequiredItem",
+			"type": "string",
+			"desc": "",
+			"sid": 818904630364501
+		},
+		{
+			"name": "ThankYouDialogue",
+			"type": "string",
+			"desc": "",
+			"sid": 614397968874044
+		},
+		{
+			"name": "HasRequiredItem",
+			"type": "boolean",
+			"desc": "",
+			"sid": 303854634491877
+		},
+		{
+			"name": "HasRequiredItemDialogueText",
+			"type": "string",
+			"desc": "",
+			"sid": 644137706430440
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Crazeh",
+		"Linda",
+		"Kyve",
+		"Lyve",
+		"Sumz"
+	]
+}

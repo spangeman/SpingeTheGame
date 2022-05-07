@@ -225,52 +225,6 @@
 					}
 				},
 				{
-					"type": "InvetoryItem",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Chest",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 19,
-					"instanceVariables": {
-						"InventoryId": 1
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 0,
-								"default-controls": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 353.21266264679736,
-						"y": 936.5424719940527,
-						"width": 13,
-						"height": 11,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "BackgroundPlatform",
 					"properties": {
 						"initially-visible": true,
@@ -380,8 +334,8 @@
 						}
 					},
 					"world": {
-						"x": 378.32349608359243,
-						"y": 926.2058061120073,
+						"x": 374,
+						"y": 918,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -823,8 +777,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 307,
-						"y": 863,
+						"x": 770,
+						"y": 1164,
 						"width": 338.9567461144738,
 						"height": 52.922318247638714,
 						"originX": 0,
@@ -836,47 +790,6 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "InvItem",
-					"properties": {
-						"text": "BOW",
-						"enable-bbcode": true,
-						"character-width": 7,
-						"character-height": 9,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "bottom-left"
-					},
-					"uid": 14,
-					"instanceVariables": {
-						"InvItemName": "Bow",
-						"PickUpMessage": "YOU GOT THE BOW!"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 318.21266264679736,
-						"y": 932.3725633238618,
-						"width": 71.05171919885433,
-						"height": 9.778529199287732,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
-							1,
-							1
-						],
-						"angle": 6.282869923087849,
 						"zElevation": 0
 					}
 				},
@@ -925,7 +838,13 @@
 						"live-preview": false
 					},
 					"uid": 80,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DialogueText": "OI GO GET ME THE RED THING|OK",
+						"RequiredItem": "InvRedThing",
+						"ThankYouDialogue": "YOU MAY PASS",
+						"HasRequiredItem": false,
+						"HasRequiredItemDialogueText": "THIS RED THING IS AWESOME"
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -1450,7 +1369,13 @@
 						"live-preview": false
 					},
 					"uid": 81,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DialogueText": "HI SPINGE|HI LINDA",
+						"RequiredItem": "",
+						"ThankYouDialogue": "",
+						"HasRequiredItem": false,
+						"HasRequiredItemDialogueText": ""
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -1477,47 +1402,6 @@
 						"color": [
 							1,
 							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "InvItem",
-					"properties": {
-						"text": "HI SPINGE",
-						"enable-bbcode": true,
-						"character-width": 7,
-						"character-height": 9,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "bottom-left"
-					},
-					"uid": 82,
-					"instanceVariables": {
-						"InvItemName": "LindaSomething",
-						"PickUpMessage": "HI LINDA"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 852.1134847819116,
-						"y": 778.4726276565525,
-						"width": 74.42611330210102,
-						"height": 12.590513558457815,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
 							1,
 							1
 						],
@@ -1588,47 +1472,6 @@
 						"color": [
 							1,
 							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "InvItem",
-					"properties": {
-						"text": "OI",
-						"enable-bbcode": true,
-						"character-width": 7,
-						"character-height": 9,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "bottom-left"
-					},
-					"uid": 24,
-					"instanceVariables": {
-						"InvItemName": "LyveSomething",
-						"PickUpMessage": "OI OI"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 591.1543562995132,
-						"y": 933.3636678617047,
-						"width": 71.05171919885433,
-						"height": 9.778529199287732,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
 							1,
 							1
 						],
@@ -2776,7 +2619,13 @@
 						"live-preview": false
 					},
 					"uid": 73,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DialogueText": "KKRIKEY SPINGE I NEED THE BLUE THING!|G'DAY MATE",
+						"RequiredItem": "InvBlueThing",
+						"ThankYouDialogue": "THANKS!",
+						"HasRequiredItem": false,
+						"HasRequiredItemDialogueText": "THIS BLUE THING IS AWESOME"
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -2811,47 +2660,6 @@
 					}
 				},
 				{
-					"type": "InvItem",
-					"properties": {
-						"text": "KKRIKEY SPINGE!",
-						"enable-bbcode": true,
-						"character-width": 7,
-						"character-height": 9,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "bottom-left"
-					},
-					"uid": 75,
-					"instanceVariables": {
-						"InvItemName": "SumzMsg",
-						"PickUpMessage": "G'DAY MATE"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 505.0401858353163,
-						"y": 398.0415797708839,
-						"width": 114.62722703629257,
-						"height": 12.26231800205585,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Lyve",
 					"properties": {
 						"initially-visible": true,
@@ -2861,7 +2669,13 @@
 						"live-preview": false
 					},
 					"uid": 33,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"DialogueText": "SKALLET FITTE! GET ME THE YELLOW THING|OMG..... LYVE!",
+						"RequiredItem": "InvYellowThing",
+						"ThankYouDialogue": "CHEERS DRIVE",
+						"HasRequiredItem": false,
+						"HasRequiredItemDialogueText": "THIS YELLOW THING IS AWESOME"
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -2888,47 +2702,6 @@
 						"color": [
 							1,
 							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "InvItem",
-					"properties": {
-						"text": "SKALLET FITTE!",
-						"enable-bbcode": true,
-						"character-width": 7,
-						"character-height": 9,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "bottom-left"
-					},
-					"uid": 85,
-					"instanceVariables": {
-						"InvItemName": "LyveMsg",
-						"PickUpMessage": "OMG..... LYVE!"
-					},
-					"behaviors": {},
-					"world": {
-						"x": 104.16900451054111,
-						"y": 86.01008075775242,
-						"width": 70.53519786523958,
-						"height": 25.045299467495553,
-						"originX": 0,
-						"originY": 1,
-						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
 							1,
 							1
 						],
@@ -3130,6 +2903,42 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "HiddenWall1",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 117,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 650.6002301607214,
+						"y": 924.9392069469691,
+						"width": 14.162218630944267,
+						"height": 30.068271384767172,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 873574922027041,
@@ -3165,50 +2974,6 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "InfoBox",
-					"properties": {
-						"text": "Text",
-						"enable-bbcode": true,
-						"character-width": 7,
-						"character-height": 9,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": false,
-						"origin": "top-left"
-					},
-					"uid": 31,
-					"instanceVariables": {},
-					"behaviors": {
-						"Pin": {
-							"properties": {
-								"destroy": false
-							}
-						}
-					},
-					"world": {
-						"x": 12.935252809082783,
-						"y": 10.470445625353335,
-						"width": 307.142131600604,
-						"height": 168.0926240791207,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							0.9803921568627451,
-							0.9803921568627451,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "CoinUI",
 					"properties": {
@@ -3563,6 +3328,79 @@
 						"color": [
 							1,
 							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InfoBoxBackground",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 116,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 167.64524878676917,
+						"y": 95.33000794701918,
+						"width": 214,
+						"height": 81.8210561212377,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InfoBox",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"character-width": 7,
+						"character-height": 9,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 31,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 12.935252809082783,
+						"y": 10.470445625353335,
+						"width": 307.142131600604,
+						"height": 168.0926240791207,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.9803921568627451,
+							0.9803921568627451,
 							1,
 							1
 						],
