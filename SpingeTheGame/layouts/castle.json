@@ -334,8 +334,8 @@
 						}
 					},
 					"world": {
-						"x": 374,
-						"y": 918,
+						"x": 609.3391020067265,
+						"y": 927.5075773139215,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -490,8 +490,8 @@
 						}
 					},
 					"world": {
-						"x": 378.169908670191,
-						"y": 909.6633134239744,
+						"x": 609.5748673478779,
+						"y": 913.2696152969788,
 						"width": 7.145376956876021,
 						"height": 5.9867238578569015,
 						"originX": 0.5,
@@ -839,11 +839,12 @@
 					},
 					"uid": 80,
 					"instanceVariables": {
-						"DialogueText": "OI GO GET ME THE RED THING|OK",
+						"DialogueText": "OI GO GET ME \nTHE RED THING\n|OK",
 						"RequiredItem": "InvRedThing",
 						"ThankYouDialogue": "YOU MAY PASS",
 						"HasRequiredItem": false,
-						"HasRequiredItemDialogueText": "THIS RED THING IS AWESOME"
+						"HasRequiredItemDialogueText": "THIS RED THING IS AWESOME",
+						"NPCName": "Kyve"
 					},
 					"behaviors": {
 						"Platform": {
@@ -1374,7 +1375,8 @@
 						"RequiredItem": "",
 						"ThankYouDialogue": "",
 						"HasRequiredItem": false,
-						"HasRequiredItemDialogueText": ""
+						"HasRequiredItemDialogueText": "",
+						"NPCName": "Linda"
 					},
 					"behaviors": {
 						"Platform": {
@@ -2624,7 +2626,8 @@
 						"RequiredItem": "InvBlueThing",
 						"ThankYouDialogue": "THANKS!",
 						"HasRequiredItem": false,
-						"HasRequiredItemDialogueText": "THIS BLUE THING IS AWESOME"
+						"HasRequiredItemDialogueText": "THIS BLUE THING IS AWESOME",
+						"NPCName": "Sumz"
 					},
 					"behaviors": {
 						"Platform": {
@@ -2674,7 +2677,8 @@
 						"RequiredItem": "InvYellowThing",
 						"ThankYouDialogue": "CHEERS DRIVE",
 						"HasRequiredItem": false,
-						"HasRequiredItemDialogueText": "THIS YELLOW THING IS AWESOME"
+						"HasRequiredItemDialogueText": "THIS YELLOW THING IS AWESOME",
+						"NPCName": "Lyve"
 					},
 					"behaviors": {
 						"Platform": {
@@ -2725,8 +2729,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 404.59784903903926,
-						"y": 931.8107978732044,
+						"x": 370.04878525958856,
+						"y": 931.6001360842523,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -2757,8 +2761,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 429.79750694544606,
-						"y": 931.6226885266591,
+						"x": 407.6776815837352,
+						"y": 931.8333503156111,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -2789,8 +2793,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 455.0236455470298,
-						"y": 931.6546843265827,
+						"x": 449.5463425994919,
+						"y": 931.4440225376306,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -2856,8 +2860,8 @@
 					},
 					"behaviors": {},
 					"world": {
-						"x": 487.94971940017956,
-						"y": 932.7356191036392,
+						"x": 483.9470971926985,
+						"y": 931.892955875367,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -3392,10 +3396,98 @@
 						}
 					},
 					"world": {
-						"x": 12.935252809082783,
-						"y": 10.470445625353335,
-						"width": 307.142131600604,
-						"height": 168.0926240791207,
+						"x": 61.3559780002867,
+						"y": 53.746171278792076,
+						"width": 211.83934449049474,
+						"height": 82.7432695751933,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.9803921568627451,
+							0.9803921568627451,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DialoguePlayer",
+					"properties": {
+						"text": "",
+						"enable-bbcode": true,
+						"character-width": 7,
+						"character-height": 9,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 75,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 63.33951985887995,
+						"y": 57.35246658678432,
+						"width": 93.21444751871817,
+						"height": 76.26614113619235,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							0.9803921568627451,
+							0.9803921568627451,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DialogueNPC",
+					"properties": {
+						"text": "",
+						"enable-bbcode": true,
+						"character-width": 7,
+						"character-height": 9,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "top-left"
+					},
+					"uid": 82,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"world": {
+						"x": 177.8398346230425,
+						"y": 56.42708004878604,
+						"width": 93.5228774439228,
+						"height": 75.34083371180725,
 						"originX": 0,
 						"originY": 0,
 						"color": [

@@ -32,6 +32,12 @@
 			"type": "string",
 			"desc": "",
 			"sid": 644137706430440
+		},
+		{
+			"name": "NPCName",
+			"type": "string",
+			"desc": "",
+			"sid": 241562493141032
 		}
 	],
 	"behaviorTypes": [],

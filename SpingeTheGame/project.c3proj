@@ -147,7 +147,9 @@
 	"objectTypes": {
 		"items": [
 			"GreenGooDeath",
-			"HiddenWall1"
+			"HiddenWall1",
+			"DialoguePlayer",
+			"DialogueNPC"
 		],
 		"subfolders": [
 			{

@@ -507,7 +507,8 @@
 						"RequiredItem": "",
 						"ThankYouDialogue": "",
 						"HasRequiredItem": false,
-						"HasRequiredItemDialogueText": ""
+						"HasRequiredItemDialogueText": "",
+						"NPCName": "Crazeh"
 					},
 					"behaviors": {
 						"Platform": {

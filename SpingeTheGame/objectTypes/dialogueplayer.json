@@ -1,0 +1,26 @@
+{
+	"name": "DialoguePlayer",
+	"plugin-id": "Spritefont2",
+	"sid": 802838878544112,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 891085240983659
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 64,
+		"height": 128,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 3852101,
+		"useCollisionPoly": true
+	}
+}

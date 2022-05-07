@@ -1595,211 +1595,6 @@
 						{
 							"id": "on-key-pressed",
 							"objectClass": "Keyboard",
-							"sid": 333056763268628,
-							"parameters": {
-								"key": 69
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 344563353484653,
-							"parameters": {
-								"object": "NPCs"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "NPCs",
-							"sid": 775939397179712,
-							"parameters": {
-								"instance-variable": "HasRequiredItem"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-visible",
-							"objectClass": "InfoBox",
-							"sid": 171175933471455,
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBox",
-							"sid": 405747709187490,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBoxBackground",
-							"sid": 700442047447489,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "InfoBox",
-							"sid": 776339103569396,
-							"parameters": {
-								"text": "NPCs.DialogueText"
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 687743674078525,
-							"parameters": {
-								"time-scale": "0.005"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 266049305696458,
-							"parameters": {
-								"seconds": "0.009"
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 635954585532648,
-							"parameters": {
-								"time-scale": "1"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBoxBackground",
-							"sid": 713386634439040,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBox",
-							"sid": 108010570607791,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 247061633703389
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 119367101376066,
-							"parameters": {
-								"key": 69
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "PlayerSprite",
-							"sid": 697115281049063,
-							"parameters": {
-								"object": "NPCs"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "NPCs",
-							"sid": 609568982721305,
-							"parameters": {
-								"instance-variable": "HasRequiredItem"
-							}
-						},
-						{
-							"id": "is-visible",
-							"objectClass": "InfoBox",
-							"sid": 686496270121420,
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBox",
-							"sid": 923262770401278,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBoxBackground",
-							"sid": 911391399934031,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "InfoBox",
-							"sid": 771976954561411,
-							"parameters": {
-								"text": "NPCs.HasRequiredItemDialogueText"
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 962543251504728,
-							"parameters": {
-								"time-scale": "0.005"
-							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 359896843889705,
-							"parameters": {
-								"seconds": "0.009"
-							}
-						},
-						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 822554027986532,
-							"parameters": {
-								"time-scale": "1"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBoxBackground",
-							"sid": 247252132759861,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "InfoBox",
-							"sid": 342208371224955,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 449161023528133
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
 							"sid": 285742079833539,
 							"parameters": {
 								"key": 69
@@ -2741,105 +2536,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-created",
-					"objectClass": "InventoryItems",
-					"sid": 790161470607997
-				},
-				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "InventoryItems",
-					"sid": 180276037591365,
-					"parameters": {
-						"object": "NPCs"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBox",
-					"sid": 822302663668240,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBoxBackground",
-					"sid": 120345645963751,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "InfoBox",
-					"sid": 217582660053769,
-					"parameters": {
-						"text": "NPCs.ThankYouDialogue"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 838866609740424,
-					"parameters": {
-						"time-scale": "0.005"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 922209087717997,
-					"parameters": {
-						"seconds": "0.009"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 515059238358929,
-					"parameters": {
-						"time-scale": "1"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "NPCs",
-					"sid": 110880158520019,
-					"parameters": {
-						"instance-variable": "HasRequiredItem",
-						"value": "true"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "InventoryItems",
-					"sid": 406656483342426
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBoxBackground",
-					"sid": 516229933066513,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBox",
-					"sid": 195297445672128,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 241129818830399
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "PlayerSprite",
 					"sid": 794762520719946,
@@ -2864,6 +2560,791 @@
 				}
 			],
 			"sid": 801669335717353
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "NPC Interactions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 840742429706614,
+							"parameters": {
+								"key": 70
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 848008996085513,
+							"parameters": {
+								"object": "NPCs"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NPCs",
+							"sid": 507061390521627,
+							"parameters": {
+								"instance-variable": "HasRequiredItem"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "InfoBox",
+							"sid": 955990362143969,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 190827169363880,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 611322584279988,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "InfoBox",
+							"sid": 713605808826268,
+							"parameters": {
+								"text": "NPCs.DialogueText",
+								"duration": "5"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 434726327569938,
+							"disabled": true,
+							"parameters": {
+								"time-scale": "0.005"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 119147623721322,
+							"parameters": {
+								"seconds": "6"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 309535410233820,
+							"disabled": true,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 810617220618813,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 488479782532241,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 268662215971971
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 108631196914418,
+							"parameters": {
+								"key": 70
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 960557191589582,
+							"parameters": {
+								"object": "NPCs"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NPCs",
+							"sid": 112847890014130,
+							"parameters": {
+								"instance-variable": "HasRequiredItem"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "InfoBox",
+							"sid": 681672821828680,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 167237279214672,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 490641251785472,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "InfoBox",
+							"sid": 945592301314566,
+							"parameters": {
+								"text": "NPCs.HasRequiredItemDialogueText"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 761246904283042,
+							"parameters": {
+								"time-scale": "0.005"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 188284619760271,
+							"parameters": {
+								"seconds": "0.009"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 419953099009551,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 340209985089952,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 774888983067091,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 522675900330822
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "InventoryItems",
+							"sid": 328587565447876
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "InventoryItems",
+							"sid": 939522738379559,
+							"parameters": {
+								"object": "NPCs"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "DialogueNPC",
+							"sid": 301403711095463,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DialoguePlayer",
+							"sid": 376544951997675,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 511096356958513,
+							"disabled": true,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 444075535621936,
+							"disabled": true,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "InfoBox",
+							"sid": 331893609112204,
+							"disabled": true,
+							"parameters": {
+								"text": "NPCs.ThankYouDialogue"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 666368942800368,
+							"disabled": true,
+							"parameters": {
+								"time-scale": "0.005"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 329915505943692,
+							"disabled": true,
+							"parameters": {
+								"seconds": "0.009"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 621811988468587,
+							"disabled": true,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"callFunction": "KyveDialogueGiveItem",
+							"sid": 665061509276671
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "NPCs",
+							"sid": 359100834148879,
+							"parameters": {
+								"instance-variable": "HasRequiredItem",
+								"value": "true"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "InventoryItems",
+							"sid": 667147835933099
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 820786509253320,
+							"disabled": true,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBox",
+							"sid": 209802691127033,
+							"disabled": true,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 837398688151080
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 704077207091729,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 698598146955428,
+							"parameters": {
+								"object": "NPCs"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NPCs",
+							"sid": 629609825279423,
+							"parameters": {
+								"instance-variable": "HasRequiredItem"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "DialogueNPC",
+							"sid": 944866697902110,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DialoguePlayer",
+							"sid": 873406718991942,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 305873918400859,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "NPCs",
+									"sid": 986668967987590,
+									"parameters": {
+										"instance-variable": "NPCName",
+										"comparison": 0,
+										"value": "\"Kyve\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "KyveDialogueNoItem",
+									"sid": 733422298834594
+								}
+							],
+							"sid": 185349612900161
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 207737874947360,
+							"parameters": {
+								"key": 69
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 771371248613050,
+							"parameters": {
+								"object": "NPCs"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NPCs",
+							"sid": 410145846636860,
+							"parameters": {
+								"instance-variable": "HasRequiredItem"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "DialogueNPC",
+							"sid": 704587885569477,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DialoguePlayer",
+							"sid": 604626372274466,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 186189873685278,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "NPCs",
+									"sid": 434863871043581,
+									"parameters": {
+										"instance-variable": "NPCName",
+										"comparison": 0,
+										"value": "\"Kyve\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "KyveDialogueHasItem",
+									"sid": 358767199702305
+								}
+							],
+							"sid": 253214062747005
+						}
+					]
+				}
+			],
+			"sid": 253153292209831
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "DialogueFunctions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "KyveDialogueNoItem",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "DialoguePlayer",
+							"sid": 440716940721493,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialogueNPC",
+							"sid": 396895425190576,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 157593479082052,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueNPC",
+							"sid": 477034327380173,
+							"parameters": {
+								"text": "\"OI! WHERE DO YOU THINK YOU ARE GOING?\"",
+								"duration": "3"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 944971781208910,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialoguePlayer",
+							"sid": 882871914245042,
+							"parameters": {
+								"text": "\"I NEED TO GET PAST PLEASE\"",
+								"duration": "3"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 383940144281519,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueNPC",
+							"sid": 519894445167647,
+							"parameters": {
+								"text": "\"HA! YEAH RIGHT\"",
+								"duration": "2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 794175575861795,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 580025535293104,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialoguePlayer",
+							"sid": 885990057163948,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialogueNPC",
+							"sid": 722971939639523,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 572702433210726
+				}
+			],
+			"sid": 176541873622817
+		},
+		{
+			"functionName": "KyveDialogueHasItem",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "DialoguePlayer",
+					"sid": 311907027841605,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueNPC",
+					"sid": 638608568381535,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBoxBackground",
+					"sid": 802660956465858,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueNPC",
+					"sid": 410030712706108,
+					"parameters": {
+						"text": "\"THANKS AGAIN!\"",
+						"duration": "3"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 780017006936557,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBoxBackground",
+					"sid": 978241865779108,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialoguePlayer",
+					"sid": 666824549911165,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueNPC",
+					"sid": 497284724858994,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 726454585445895
+		},
+		{
+			"functionName": "KyveDialogueGiveItem",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "DialoguePlayer",
+					"sid": 622908682081897,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueNPC",
+					"sid": 903337363543510,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBoxBackground",
+					"sid": 395011889563448,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialoguePlayer",
+					"sid": 505952051519274,
+					"parameters": {
+						"text": "\"TAKE THIS\"",
+						"duration": "3"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 402464254561175,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "DialogueNPC",
+					"sid": 371724397381124,
+					"parameters": {
+						"text": "\"THANKS!\"",
+						"duration": "3"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 400328941771709,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "InfoBoxBackground",
+					"sid": 803643051475415,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialoguePlayer",
+					"sid": 193767120129993,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "DialogueNPC",
+					"sid": 285862797950670,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 743259701510852
 		}
 	],
 	"sid": 906989763335380
