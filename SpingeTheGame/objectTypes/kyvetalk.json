@@ -1,0 +1,153 @@
+{
+	"name": "KyveTalk",
+	"plugin-id": "Sprite",
+	"sid": 715192233476404,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3840621,
+						"collisionPoly": {
+							"points": [
+								0.34375,
+								0.34375,
+								0.5,
+								0.125,
+								0.71875,
+								0.25,
+								0.75,
+								0.5,
+								0.78125,
+								0.78125,
+								0.5,
+								0.96875,
+								0.1875,
+								0.78125,
+								0.21875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1813009,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.21875,
+								0.90625,
+								0.0625,
+								0.875,
+								0.5,
+								0.65625,
+								0.65625,
+								0.5,
+								0.96875,
+								0.125,
+								0.84375,
+								0.09375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5794411,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.25,
+								0.875,
+								0.09375,
+								0.90625,
+								0.5,
+								0.65625,
+								0.65625,
+								0.5,
+								0.96875,
+								0.125,
+								0.84375,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9315660,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.21875,
+								0.875,
+								0.09375,
+								0.90625,
+								0.5,
+								0.8125,
+								0.8125,
+								0.5,
+								0.96875,
+								0.125,
+								0.84375,
+								0.09375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 305243691685122,
+				"name": "Talk",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -3069,6 +3069,15 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 555339902273666,
+							"parameters": {
+								"group-name": "\"Player Movement\"",
+								"state": "deactivated"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "DialoguePlayer",
 							"sid": 440716940721493,
@@ -3093,6 +3102,14 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 876467225530417,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
 							"id": "typewriter-text",
 							"objectClass": "DialogueNPC",
 							"sid": 477034327380173,
@@ -3104,26 +3121,58 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 944971781208910,
+							"sid": 231286967235459,
 							"parameters": {
-								"seconds": "5"
+								"seconds": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 331954734704804,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerTalk",
+							"sid": 785820172325445,
+							"parameters": {
+								"visibility": "visible"
 							}
 						},
 						{
 							"id": "typewriter-text",
 							"objectClass": "DialoguePlayer",
-							"sid": 882871914245042,
+							"sid": 572282155856337,
 							"parameters": {
 								"text": "\"I NEED TO GET PAST PLEASE\"",
-								"duration": "3"
+								"duration": "2"
 							}
 						},
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 383940144281519,
+							"sid": 144113833410660,
 							"parameters": {
-								"seconds": "5"
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerTalk",
+							"sid": 255479382135157,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 366099235813571,
+							"parameters": {
+								"visibility": "visible"
 							}
 						},
 						{
@@ -3141,6 +3190,14 @@
 							"sid": 794175575861795,
 							"parameters": {
 								"seconds": "3"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 553052488325363,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						},
 						{
@@ -3166,185 +3223,291 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 999896658538612,
+							"parameters": {
+								"group-name": "\"Player Movement\"",
+								"state": "activated"
+							}
 						}
 					],
 					"sid": 572702433210726
+				},
+				{
+					"functionName": "KyveDialogueGiveItem",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 189925490197783,
+							"parameters": {
+								"group-name": "\"Player Movement\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialoguePlayer",
+							"sid": 483911537176191,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialogueNPC",
+							"sid": 575306385382786,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 903475279954153,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerTalk",
+							"sid": 379664094330870,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialoguePlayer",
+							"sid": 472364631907978,
+							"parameters": {
+								"text": "\"HERE TAKE THIS\"",
+								"duration": "2"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 422231686918281,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "playerTalk",
+							"sid": 863583742583303,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 246514004075556,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueNPC",
+							"sid": 144088086361336,
+							"parameters": {
+								"text": "\"THANKS! YOU MAY PASS\"",
+								"duration": "3"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 182485062708571,
+							"parameters": {
+								"seconds": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 712975501796093,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 767423009143836,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialoguePlayer",
+							"sid": 850357775184435,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialogueNPC",
+							"sid": 697131378330544,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 296821116308093,
+							"parameters": {
+								"group-name": "\"Player Movement\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 242484169413397,
+							"parameters": {
+								"object-to-create": "InvOrangeThing",
+								"layer": "1",
+								"x": "600",
+								"y": "850",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 781567320730194
+				},
+				{
+					"functionName": "KyveDialogueHasItem",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 191085450842089,
+							"parameters": {
+								"group-name": "\"Player Movement\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialoguePlayer",
+							"sid": 590997212149897,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialogueNPC",
+							"sid": 524772728693066,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 774522173276432,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 791669787572392,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "DialogueNPC",
+							"sid": 176095563957476,
+							"parameters": {
+								"text": "\"THANKS AGAIN!\"",
+								"duration": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 609881002687912,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "KyveTalk",
+							"sid": 106467790277415,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "InfoBoxBackground",
+							"sid": 920679269920845,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialoguePlayer",
+							"sid": 385318526790939,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "DialogueNPC",
+							"sid": 805327652263900,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 219152200418893,
+							"parameters": {
+								"group-name": "\"Player Movement\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 852988290501497
 				}
 			],
 			"sid": 176541873622817
-		},
-		{
-			"functionName": "KyveDialogueHasItem",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "DialoguePlayer",
-					"sid": 311907027841605,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialogueNPC",
-					"sid": 638608568381535,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBoxBackground",
-					"sid": 802660956465858,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialogueNPC",
-					"sid": 410030712706108,
-					"parameters": {
-						"text": "\"THANKS AGAIN!\"",
-						"duration": "3"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 780017006936557,
-					"parameters": {
-						"seconds": "5"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBoxBackground",
-					"sid": 978241865779108,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialoguePlayer",
-					"sid": 666824549911165,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialogueNPC",
-					"sid": 497284724858994,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 726454585445895
-		},
-		{
-			"functionName": "KyveDialogueGiveItem",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"id": "set-visible",
-					"objectClass": "DialoguePlayer",
-					"sid": 622908682081897,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialogueNPC",
-					"sid": 903337363543510,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBoxBackground",
-					"sid": 395011889563448,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialoguePlayer",
-					"sid": 505952051519274,
-					"parameters": {
-						"text": "\"TAKE THIS\"",
-						"duration": "3"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 402464254561175,
-					"parameters": {
-						"seconds": "5"
-					}
-				},
-				{
-					"id": "typewriter-text",
-					"objectClass": "DialogueNPC",
-					"sid": 371724397381124,
-					"parameters": {
-						"text": "\"THANKS!\"",
-						"duration": "3"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 400328941771709,
-					"parameters": {
-						"seconds": "5"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "InfoBoxBackground",
-					"sid": 803643051475415,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialoguePlayer",
-					"sid": 193767120129993,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "DialogueNPC",
-					"sid": 285862797950670,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				}
-			],
-			"sid": 743259701510852
 		}
 	],
 	"sid": 906989763335380

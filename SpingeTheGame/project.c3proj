@@ -159,7 +159,8 @@
 					"EnemyBobTheBlob",
 					"Crazeh",
 					"Lyve",
-					"Sumz"
+					"Sumz",
+					"KyveTalk"
 				],
 				"subfolders": [],
 				"name": "NPCs"
@@ -191,7 +192,8 @@
 					"Hit",
 					"Dust",
 					"player",
-					"PlayerSprite"
+					"PlayerSprite",
+					"playerTalk"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -236,7 +238,8 @@
 					"InvGreenThing",
 					"InvPurpleThing",
 					"InvRedThing",
-					"InvYellowThing"
+					"InvYellowThing",
+					"InvOrangeThing"
 				],
 				"subfolders": [],
 				"name": "Inventory"

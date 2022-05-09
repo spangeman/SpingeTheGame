@@ -334,8 +334,8 @@
 						}
 					},
 					"world": {
-						"x": 609.3391020067265,
-						"y": 927.5075773139215,
+						"x": 328.94398242161253,
+						"y": 911.2574056106932,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -490,8 +490,8 @@
 						}
 					},
 					"world": {
-						"x": 609.5748673478779,
-						"y": 913.2696152969788,
+						"x": 330.13564021589497,
+						"y": 894.4703970520678,
 						"width": 7.145376956876021,
 						"height": 5.9867238578569015,
 						"originX": 0.5,
@@ -857,7 +857,7 @@
 								"max-fall-speed": 1000,
 								"double-jump": false,
 								"jump-sustain": 0,
-								"default-controls": false,
+								"default-controls": true,
 								"enabled": true
 							}
 						}
@@ -2697,8 +2697,8 @@
 						}
 					},
 					"world": {
-						"x": 110.37174795718656,
-						"y": 74.48605734941913,
+						"x": 102.24330958331034,
+						"y": 196.6553861442982,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -3352,10 +3352,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 167.64524878676917,
-						"y": 95.33000794701918,
-						"width": 214,
-						"height": 81.8210561212377,
+						"x": 159.8315679789003,
+						"y": 99.53737541772965,
+						"width": 310.16827158709395,
+						"height": 149.13888979598897,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3396,10 +3396,10 @@
 						}
 					},
 					"world": {
-						"x": 61.3559780002867,
-						"y": 53.746171278792076,
-						"width": 211.83934449049474,
-						"height": 82.7432695751933,
+						"x": 5.578193990116638,
+						"y": 26.69886137464337,
+						"width": 311.53503730685736,
+						"height": 151.26316566043243,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -3440,10 +3440,10 @@
 						}
 					},
 					"world": {
-						"x": 63.33951985887995,
-						"y": 57.35246658678432,
-						"width": 93.21444751871817,
-						"height": 76.26614113619235,
+						"x": 8.643788596260151,
+						"y": 26.097766283617034,
+						"width": 147.91017878133798,
+						"height": 147.19029961225596,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -3485,14 +3485,79 @@
 					},
 					"world": {
 						"x": 177.8398346230425,
-						"y": 56.42708004878604,
-						"width": 93.5228774439228,
-						"height": 75.34083371180725,
+						"y": 24.5713370762207,
+						"width": 139.20280816741555,
+						"height": 148.66916286546302,
 						"originX": 0,
 						"originY": 0,
 						"color": [
 							0.9803921568627451,
 							0.9803921568627451,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "KyveTalk",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Talk",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"instanceVariables": {
+						"DialogueText": "OI GO GET ME \nTHE RED THING\n|OK",
+						"RequiredItem": "InvRedThing",
+						"ThankYouDialogue": "YOU MAY PASS",
+						"HasRequiredItem": false,
+						"HasRequiredItemDialogueText": "THIS RED THING IS AWESOME",
+						"NPCName": "Kyve"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 302.0603066683044,
+						"y": 40.201097678345945,
+						"width": -32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "playerTalk",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Talk",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 17.02222773037039,
+						"y": 38.03535138771424,
+						"width": 12,
+						"height": 18,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
 							1,
 							1
 						],

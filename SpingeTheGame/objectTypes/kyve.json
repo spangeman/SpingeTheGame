@@ -8,7 +8,7 @@
 		{
 			"behaviorId": "Platform",
 			"name": "Platform",
-			"sid": 172094007086527
+			"sid": 117999999603136
 		}
 	],
 	"effectTypes": [],
@@ -147,6 +147,145 @@
 				],
 				"sid": 269118897414928,
 				"name": "Idle",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5253137,
+						"collisionPoly": {
+							"points": [
+								0.34375,
+								0.34375,
+								0.5,
+								0.125,
+								0.71875,
+								0.25,
+								0.75,
+								0.5,
+								0.78125,
+								0.78125,
+								0.5,
+								0.96875,
+								0.1875,
+								0.78125,
+								0.21875,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 488707,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.21875,
+								0.90625,
+								0.0625,
+								0.875,
+								0.5,
+								0.65625,
+								0.65625,
+								0.5,
+								0.96875,
+								0.125,
+								0.84375,
+								0.09375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9025519,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.25,
+								0.875,
+								0.09375,
+								0.90625,
+								0.5,
+								0.65625,
+								0.65625,
+								0.5,
+								0.96875,
+								0.125,
+								0.84375,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3950273,
+						"collisionPoly": {
+							"points": [
+								0.28125,
+								0.28125,
+								0.5,
+								0.21875,
+								0.875,
+								0.09375,
+								0.90625,
+								0.5,
+								0.8125,
+								0.8125,
+								0.5,
+								0.96875,
+								0.125,
+								0.84375,
+								0.09375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 517925013855645,
+				"name": "Talk",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
