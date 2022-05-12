@@ -11,7 +11,13 @@
 			"sid": 688294099040991
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 520828076375393
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

@@ -511,6 +511,9 @@
 						"NPCName": "Crazeh"
 					},
 					"behaviors": {
+						"Persist": {
+							"properties": {}
+						},
 						"Platform": {
 							"properties": {
 								"max-speed": 330,

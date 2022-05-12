@@ -40,7 +40,13 @@
 			"sid": 241562493141032
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 762839386915050
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"Crazeh",

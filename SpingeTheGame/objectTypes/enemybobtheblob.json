@@ -27,6 +27,11 @@
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 756058711024475
+		},
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 725976333031072
 		}
 	],
 	"effectTypes": [],

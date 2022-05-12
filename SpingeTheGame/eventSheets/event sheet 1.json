@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "Coins",
+			"name": "GlobalCoins",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
@@ -25,7 +25,7 @@
 			"eventType": "variable",
 			"name": "currentCPX",
 			"type": "number",
-			"initialValue": "3090",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -35,7 +35,7 @@
 			"eventType": "variable",
 			"name": "currentCPY",
 			"type": "number",
-			"initialValue": "1400",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -636,7 +636,37 @@
 							}
 						}
 					],
-					"sid": 940689370477545
+					"sid": 940689370477545,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 746585044945789,
+									"parameters": {
+										"variable": "currentCPX",
+										"comparison": 0,
+										"value": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "PlayerSprite",
+									"sid": 815022699667061,
+									"parameters": {
+										"x": "currentCPX",
+										"y": "currentCPY"
+									}
+								}
+							],
+							"sid": 573735298739797
+						}
+					]
 				}
 			],
 			"sid": 703281891066166
@@ -845,7 +875,7 @@
 							"sid": 323837193115228,
 							"parameters": {
 								"instance-variable": "Coins",
-								"value": "Coins"
+								"value": "GlobalCoins"
 							}
 						},
 						{
@@ -895,11 +925,11 @@
 							"sid": 787436859458384
 						},
 						{
-							"id": "add-to-instvar",
-							"objectClass": "PlayerSprite",
-							"sid": 851499448102425,
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 185406265612363,
 							"parameters": {
-								"instance-variable": "Coins",
+								"variable": "GlobalCoins",
 								"value": "1"
 							}
 						},
@@ -907,8 +937,9 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 601567234235282,
+							"disabled": true,
 							"parameters": {
-								"variable": "Coins",
+								"variable": "GlobalCoins",
 								"value": "PlayerSprite.Coins"
 							}
 						}
@@ -2524,9 +2555,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "CoinUI",
-					"sid": 543603310121456,
+					"sid": 776752958366835,
 					"parameters": {
-						"text": "PlayerSprite.Coins"
+						"text": "GlobalCoins"
 					}
 				}
 			],
@@ -3379,16 +3410,12 @@
 							}
 						},
 						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 242484169413397,
+							"id": "set-position",
+							"objectClass": "InvOrangeThing",
+							"sid": 128724655922269,
 							"parameters": {
-								"object-to-create": "InvOrangeThing",
-								"layer": "1",
-								"x": "600",
-								"y": "850",
-								"create-hierarchy": false,
-								"template-name": "\"\""
+								"x": "606",
+								"y": "932"
 							}
 						}
 					],

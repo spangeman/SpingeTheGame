@@ -1,7 +1,7 @@
 {
 	"name": "InvOrangeThing",
 	"plugin-id": "Sprite",
-	"sid": 641616515762317,
+	"sid": 206322931396723,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6608306,
+						"imageSpriteId": 3341060,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 983052203561580,
+				"sid": 877871334810384,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

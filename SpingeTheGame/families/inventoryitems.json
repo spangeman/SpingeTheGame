@@ -16,7 +16,13 @@
 			"sid": 309355457395071
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Persist",
+			"name": "Persist",
+			"sid": 165192964875688
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"InvBlueThing",

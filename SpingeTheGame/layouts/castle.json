@@ -334,8 +334,8 @@
 						}
 					},
 					"world": {
-						"x": 328.94398242161253,
-						"y": 911.2574056106932,
+						"x": 360.2384807724844,
+						"y": 759.0770499350743,
 						"width": 16,
 						"height": 16,
 						"originX": 0.5,
@@ -389,6 +389,9 @@
 								"default-controls": false,
 								"enabled": true
 							}
+						},
+						"Persist": {
+							"properties": {}
 						}
 					},
 					"world": {
@@ -568,7 +571,11 @@
 					"instanceVariables": {
 						"Coins": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 543,
 						"y": 937,
@@ -847,6 +854,9 @@
 						"NPCName": "Kyve"
 					},
 					"behaviors": {
+						"Persist": {
+							"properties": {}
+						},
 						"Platform": {
 							"properties": {
 								"max-speed": 330,
@@ -937,7 +947,11 @@
 					"instanceVariables": {
 						"Coins": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 552,
 						"y": 937,
@@ -968,7 +982,11 @@
 					"instanceVariables": {
 						"Coins": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 561,
 						"y": 937,
@@ -999,7 +1017,11 @@
 					"instanceVariables": {
 						"Coins": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 570,
 						"y": 937,
@@ -1030,7 +1052,11 @@
 					"instanceVariables": {
 						"Coins": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 534,
 						"y": 937,
@@ -1379,6 +1405,9 @@
 						"NPCName": "Linda"
 					},
 					"behaviors": {
+						"Persist": {
+							"properties": {}
+						},
 						"Platform": {
 							"properties": {
 								"max-speed": 330,
@@ -2630,6 +2659,9 @@
 						"NPCName": "Sumz"
 					},
 					"behaviors": {
+						"Persist": {
+							"properties": {}
+						},
 						"Platform": {
 							"properties": {
 								"max-speed": 330,
@@ -2681,6 +2713,9 @@
 						"NPCName": "Lyve"
 					},
 					"behaviors": {
+						"Persist": {
+							"properties": {}
+						},
 						"Platform": {
 							"properties": {
 								"max-speed": 330,
@@ -2727,7 +2762,11 @@
 						"Name": "InvRedThing",
 						"CurrentInvSlot": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 370.04878525958856,
 						"y": 931.6001360842523,
@@ -2759,7 +2798,11 @@
 						"Name": "InvGreenThing",
 						"CurrentInvSlot": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 407.6776815837352,
 						"y": 931.8333503156111,
@@ -2791,7 +2834,11 @@
 						"Name": "InvBlueThing",
 						"CurrentInvSlot": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 449.5463425994919,
 						"y": 931.4440225376306,
@@ -2858,7 +2905,11 @@
 						"Name": "InvPurpleThing",
 						"CurrentInvSlot": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 483.9470971926985,
 						"y": 931.892955875367,
@@ -2890,7 +2941,11 @@
 						"Name": "InvYellowThing",
 						"CurrentInvSlot": 0
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 516.4852733438928,
 						"y": 931.7780800686838,
@@ -2932,6 +2987,42 @@
 						"y": 924.9392069469691,
 						"width": 14.162218630944267,
 						"height": 30.068271384767172,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InvOrangeThing",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 85,
+					"instanceVariables": {
+						"Name": "InvOrangeThing",
+						"CurrentInvSlot": 0
+					},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": -9,
+						"y": 1284,
+						"width": 16,
+						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3518,7 +3609,11 @@
 						"HasRequiredItemDialogueText": "THIS RED THING IS AWESOME",
 						"NPCName": "Kyve"
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Persist": {
+							"properties": {}
+						}
+					},
 					"world": {
 						"x": 302.0603066683044,
 						"y": 40.201097678345945,
