@@ -102,7 +102,8 @@
 			"Mouse",
 			"Keyboard",
 			"Browser",
-			"FloorSolid"
+			"FloorSolid",
+			"InvItemTest"
 		],
 		"subfolders": [
 			{
@@ -147,7 +148,8 @@
 	],
 	"families": {
 		"items": [
-			"AimSpotFamily"
+			"AimSpotFamily",
+			"InventoryItemFamily"
 		],
 		"subfolders": []
 	},

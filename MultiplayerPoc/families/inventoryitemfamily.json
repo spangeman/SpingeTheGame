@@ -1,0 +1,11 @@
+{
+	"name": "InventoryItemFamily",
+	"plugin-id": "Sprite",
+	"sid": 395511662320938,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"InvItemTest"
+	]
+}

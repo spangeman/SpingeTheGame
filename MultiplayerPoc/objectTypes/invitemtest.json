@@ -1,16 +1,10 @@
 {
-	"name": "FloorSolid",
+	"name": "InvItemTest",
 	"plugin-id": "Sprite",
-	"sid": 884094040766593,
+	"sid": 590298311747991,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 637039641286921
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -24,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4662723,
+						"imageSpriteId": 2426538,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 302350276873021,
+				"sid": 136126558554152,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
