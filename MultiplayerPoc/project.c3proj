@@ -121,7 +121,7 @@
 					"AimSpot",
 					"HostIndicator",
 					"NetStats",
-					"Peer",
+					"Player",
 					"PeerLaser",
 					"PeerName",
 					"LogText",
@@ -139,7 +139,7 @@
 		{
 			"members": [
 				"AimSpot",
-				"Peer",
+				"Player",
 				"PeerLaser",
 				"PeerName"
 			],

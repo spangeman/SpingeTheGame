@@ -6,6 +6,10 @@
 			"text": "The alias to pass to the next layout."
 		},
 		{
+			"eventType": "comment",
+			"text": "Autologin for easier testing"
+		},
+		{
 			"eventType": "variable",
 			"name": "MyUsername",
 			"type": "string",
@@ -29,6 +33,31 @@
 					"id": "set-focused",
 					"objectClass": "NameTextBox",
 					"sid": 9867701037124424
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 143163138483429,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 184423187541335,
+					"parameters": {
+						"variable": "MyUsername",
+						"value": "choose(\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\",\"Z\",\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\")"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 764156077446531,
+					"parameters": {
+						"layout": "Game"
+					}
 				}
 			],
 			"sid": 2836949466833005,
