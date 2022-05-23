@@ -44,8 +44,8 @@
 						}
 					},
 					"world": {
-						"x": 167,
-						"y": 588,
+						"x": 165.9954316167872,
+						"y": 606.6185224162972,
 						"width": 43,
 						"height": 72,
 						"originX": 0.425743,
@@ -142,11 +142,75 @@
 						"live-preview": false
 					},
 					"uid": 24,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"ItemName": "GreenThing"
+					},
 					"behaviors": {},
 					"world": {
 						"x": 436.20156853593414,
-						"y": 480.7378100072933,
+						"y": 482.74746773019814,
+						"width": 44,
+						"height": 47,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InvItemTest3",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 27,
+					"instanceVariables": {
+						"ItemName": "BlueThing"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 435.6901565645999,
+						"y": 240.814667199338,
+						"width": 44,
+						"height": 47,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InvItemTest2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"instanceVariables": {
+						"ItemName": "RedThing"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 237.64735565150204,
+						"y": 373.6077827603918,
 						"width": 44,
 						"height": 47,
 						"originX": 0.5,
@@ -313,10 +377,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 647,
+						"x": 540,
 						"y": 6,
 						"width": 363,
-						"height": 86,
+						"height": 43,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -503,8 +567,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 371,
-						"y": 266.5,
+						"x": -185,
+						"y": 318,
 						"width": 200,
 						"height": 39,
 						"originX": 0.5,
@@ -653,6 +717,48 @@
 						"height": 31,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "UserId",
+					"properties": {
+						"text": "UserId",
+						"enable-bbcode": false,
+						"font": "Arial",
+						"size": 36,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.4,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 25,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 671,
+						"y": 53,
+						"width": 342,
+						"height": 43,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

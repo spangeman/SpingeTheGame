@@ -260,9 +260,9 @@
 						{
 							"id": "sync-object",
 							"objectClass": "Multiplayer",
-							"sid": 622382533763040,
+							"sid": 584587366965187,
 							"parameters": {
-								"object": "InvItemTest",
+								"object": "InventoryItemFamily",
 								"data": "position-only",
 								"precision": "low-int16-2-bytes",
 								"bandwidth": "normal-bandwidth-unpredictable"
@@ -432,6 +432,14 @@
 								"room": "ROOM_NAME",
 								"max-peers": "0"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "UserId",
+							"sid": 897683942156082,
+							"parameters": {
+								"text": "\"MyAlias: \" & Multiplayer.MyAlias"
+							}
 						}
 					],
 					"sid": 7761898484234081
@@ -563,8 +571,8 @@
 								},
 								{
 									"id": "destroy",
-									"objectClass": "InvItemTest",
-									"sid": 944625932034448
+									"objectClass": "InventoryItemFamily",
+									"sid": 251450618413934
 								}
 							],
 							"sid": 8025172574882813
@@ -1417,9 +1425,9 @@
 								},
 								{
 									"callFunction": "AddLog",
-									"sid": 614545826181481,
+									"sid": 178167045104249,
 									"parameters": [
-										"Player.peerid & \"picked up item\""
+										"Player.peerid & \" picked up item \" & InventoryItemFamily.ItemName"
 									]
 								}
 							],
@@ -1804,9 +1812,9 @@
 										},
 										{
 											"callFunction": "AddLog",
-											"sid": 378155678817601,
+											"sid": 363073785714112,
 											"parameters": [
-												"Player.peerid & \"picked up item\""
+												"Player.peerid & \" picked up item \" & InventoryItemFamily.ItemName"
 											]
 										}
 									],

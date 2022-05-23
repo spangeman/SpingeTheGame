@@ -103,7 +103,10 @@
 			"Keyboard",
 			"Browser",
 			"FloorSolid",
-			"InvItemTest"
+			"InvItemTest",
+			"UserId",
+			"InvItemTest2",
+			"InvItemTest3"
 		],
 		"subfolders": [
 			{
@@ -139,9 +142,9 @@
 		{
 			"members": [
 				"AimSpot",
-				"Player",
 				"PeerLaser",
-				"PeerName"
+				"PeerName",
+				"Player"
 			],
 			"selectMode": "normal"
 		}

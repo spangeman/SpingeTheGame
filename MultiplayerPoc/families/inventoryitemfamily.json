@@ -2,10 +2,19 @@
 	"name": "InventoryItemFamily",
 	"plugin-id": "Sprite",
 	"sid": 395511662320938,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "ItemName",
+			"type": "string",
+			"desc": "",
+			"sid": 722667749044293
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"InvItemTest"
+		"InvItemTest",
+		"InvItemTest2",
+		"InvItemTest3"
 	]
 }
