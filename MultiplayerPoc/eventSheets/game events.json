@@ -260,6 +260,17 @@
 						{
 							"id": "sync-object",
 							"objectClass": "Multiplayer",
+							"sid": 156275468744213,
+							"parameters": {
+								"object": "EnemyFamily",
+								"data": "position-and-angle",
+								"precision": "low-int16-2-bytes",
+								"bandwidth": "normal-bandwidth-unpredictable"
+							}
+						},
+						{
+							"id": "sync-object",
+							"objectClass": "Multiplayer",
 							"sid": 584587366965187,
 							"parameters": {
 								"object": "InventoryItemFamily",
@@ -322,6 +333,36 @@
 								"instance-variable": {
 									"name": "health",
 									"objectClass": "Player"
+								},
+								"precision": "very-low-uint8-1-byte",
+								"interpolation": "none",
+								"client-value-tag": "\"\""
+							}
+						},
+						{
+							"id": "sync-instance-variable",
+							"objectClass": "Multiplayer",
+							"sid": 396099206869650,
+							"parameters": {
+								"object": "EnemyFamily",
+								"instance-variable": {
+									"name": "health",
+									"objectClass": "EnemyFamily"
+								},
+								"precision": "very-low-uint8-1-byte",
+								"interpolation": "none",
+								"client-value-tag": "\"\""
+							}
+						},
+						{
+							"id": "sync-instance-variable",
+							"objectClass": "Multiplayer",
+							"sid": 914191986465276,
+							"parameters": {
+								"object": "EnemyFamily",
+								"instance-variable": {
+									"name": "mirror",
+									"objectClass": "EnemyFamily"
 								},
 								"precision": "very-low-uint8-1-byte",
 								"interpolation": "none",
@@ -573,6 +614,11 @@
 									"id": "destroy",
 									"objectClass": "InventoryItemFamily",
 									"sid": 251450618413934
+								},
+								{
+									"id": "destroy",
+									"objectClass": "EnemyFamily",
+									"sid": 847666929288504
 								}
 							],
 							"sid": 8025172574882813
@@ -1326,6 +1372,59 @@
 									"sid": 9219847413697906
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 154007352308357
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyFamily",
+									"sid": 225951722551104,
+									"parameters": {
+										"instance-variable": "mirror",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyFamily",
+									"sid": 276267600298499,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 833443774668406
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 778691792864336
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyFamily",
+									"sid": 104097667971087,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 401639144535340
 						}
 					],
 					"sid": 3251139189519888
@@ -1432,6 +1531,42 @@
 								}
 							],
 							"sid": 645689965874541
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 321960675800374,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 914918531149102,
+									"parameters": {
+										"object": "EnemyFamily"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "EnemyFamily",
+									"sid": 378241740198964
+								},
+								{
+									"callFunction": "AddLog",
+									"sid": 420986241570674,
+									"parameters": [
+										"Player.peerid & \" picked up item \" & EnemyFamily.name"
+									]
+								}
+							],
+							"sid": 127180920539783
 						},
 						{
 							"eventType": "block",
@@ -1826,6 +1961,44 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
+											"sid": 239140657702521,
+											"parameters": {
+												"first-value": "getbit(Player.inputs, 5)",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Player",
+											"sid": 661032028406475,
+											"parameters": {
+												"object": "EnemyFamily"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "EnemyFamily",
+											"sid": 571421771288726
+										},
+										{
+											"callFunction": "AddLog",
+											"sid": 799473036240568,
+											"parameters": [
+												"Player.peerid & \" picked up item \" & EnemyFamily.name"
+											]
+										}
+									],
+									"sid": 633257278749442
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
 											"sid": 167345276341326,
 											"parameters": {
 												"first-value": "getbit(Player.inputs, 3)",
@@ -2176,6 +2349,57 @@
 											"sid": 589136407406463
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 585636935870695,
+											"parameters": {
+												"object": "EnemyFamily"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 714935486869724,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "EnemyFamily",
+													"sid": 128675406480042,
+													"parameters": {
+														"object": "AimSpotFamily"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "subtract-from-instvar",
+													"objectClass": "EnemyFamily",
+													"sid": 929653207630714,
+													"parameters": {
+														"instance-variable": "health",
+														"value": "20"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "EnemyFamily",
+													"sid": 200792044123130,
+													"parameters": {
+														"instance-variable": "lasthitbypeerid",
+														"value": "firingPeerId"
+													}
+												}
+											],
+											"sid": 877076482459563
+										}
+									]
 								}
 							]
 						},
@@ -2260,6 +2484,83 @@
 							]
 						},
 						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyFamily",
+									"sid": 199525441166610,
+									"parameters": {
+										"instance-variable": "health",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "EnemyFamily",
+									"sid": 683779542748635
+								},
+								{
+									"callFunction": "AddLog",
+									"sid": 845100134683699,
+									"parameters": [
+										"EnemyFamily.lasthitbypeerid & \" killed \" & EnemyFamily.name"
+									]
+								}
+							],
+							"sid": 378635991921129
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyFamily",
+									"sid": 194026479802233,
+									"parameters": {
+										"instance-variable": "mirror",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyFamily",
+									"sid": 874895321449980,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 941772922845369
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 751560735962474
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyFamily",
+									"sid": 744236935310778,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 804950967314627
+						},
+						{
 							"eventType": "comment",
 							"text": "This function simply serves to add to the kill count of a different peer to the one who died. We pick the peer by the function parameter, which is the ID of the last peer who hit them."
 						},
@@ -2334,6 +2635,101 @@
 								}
 							],
 							"sid": 3740149403622605
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "EnemyFamily",
+									"sid": 283604996312828,
+									"parameters": {
+										"object": "EnemyHiddenWall"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "toggle-boolean-instvar",
+									"objectClass": "EnemyFamily",
+									"sid": 835161750817508,
+									"parameters": {
+										"instance-variable": "dir"
+									}
+								}
+							],
+							"sid": 941047055068226,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "EnemyFamily",
+											"sid": 836970209844756,
+											"parameters": {
+												"instance-variable": "dir"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "EnemyFamily",
+											"sid": 889008713839874,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "EnemyFamily",
+											"sid": 572667220866743,
+											"parameters": {
+												"instance-variable": "mirror",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 421595311530110
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "EnemyFamily",
+											"sid": 303535025422075,
+											"parameters": {
+												"instance-variable": "dir"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "EnemyFamily",
+											"sid": 603624658717180,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "180"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "EnemyFamily",
+											"sid": 222915536344604,
+											"parameters": {
+												"instance-variable": "mirror",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 943305733653520
+								}
+							]
 						}
 					],
 					"sid": 5993157518437331

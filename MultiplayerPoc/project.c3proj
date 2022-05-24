@@ -93,6 +93,14 @@
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "ttrj7vn6jou",
@@ -106,7 +114,12 @@
 			"InvItemTest",
 			"UserId",
 			"InvItemTest2",
-			"InvItemTest3"
+			"InvItemTest3",
+			"InvItemTest4",
+			"EnemyRed",
+			"EnemyHiddenWall",
+			"EnemyBlue",
+			"EnemyYellow"
 		],
 		"subfolders": [
 			{
@@ -152,7 +165,8 @@
 	"families": {
 		"items": [
 			"AimSpotFamily",
-			"InventoryItemFamily"
+			"InventoryItemFamily",
+			"EnemyFamily"
 		],
 		"subfolders": []
 	},

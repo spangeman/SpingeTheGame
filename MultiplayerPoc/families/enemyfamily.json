@@ -1,0 +1,55 @@
+{
+	"name": "EnemyFamily",
+	"plugin-id": "Sprite",
+	"sid": 785141007247656,
+	"instanceVariables": [
+		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"sid": 236646339537345
+		},
+		{
+			"name": "name",
+			"type": "string",
+			"desc": "",
+			"sid": 976055676096978
+		},
+		{
+			"name": "lasthitbypeerid",
+			"type": "string",
+			"desc": "",
+			"sid": 435708739524391
+		},
+		{
+			"name": "dir",
+			"type": "boolean",
+			"desc": "",
+			"sid": 946415455095771
+		},
+		{
+			"name": "mirror",
+			"type": "number",
+			"desc": "",
+			"sid": 738118991993337
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 348638940635802
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 242654946794095
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"EnemyRed",
+		"EnemyBlue",
+		"EnemyYellow"
+	]
+}
