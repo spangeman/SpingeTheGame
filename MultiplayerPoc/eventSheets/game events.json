@@ -1378,53 +1378,6 @@
 							"conditions": [],
 							"actions": [],
 							"sid": 154007352308357
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "EnemyFamily",
-									"sid": 225951722551104,
-									"parameters": {
-										"instance-variable": "mirror",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "EnemyFamily",
-									"sid": 276267600298499,
-									"parameters": {
-										"state": "mirrored"
-									}
-								}
-							],
-							"sid": 833443774668406
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 778691792864336
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "EnemyFamily",
-									"sid": 104097667971087,
-									"parameters": {
-										"state": "not-mirrored"
-									}
-								}
-							],
-							"sid": 401639144535340
 						}
 					],
 					"sid": 3251139189519888
@@ -2514,53 +2467,6 @@
 							"sid": 378635991921129
 						},
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "EnemyFamily",
-									"sid": 194026479802233,
-									"parameters": {
-										"instance-variable": "mirror",
-										"comparison": 0,
-										"value": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "EnemyFamily",
-									"sid": 874895321449980,
-									"parameters": {
-										"state": "mirrored"
-									}
-								}
-							],
-							"sid": 941772922845369
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 751560735962474
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "EnemyFamily",
-									"sid": 744236935310778,
-									"parameters": {
-										"state": "not-mirrored"
-									}
-								}
-							],
-							"sid": 804950967314627
-						},
-						{
 							"eventType": "comment",
 							"text": "This function simply serves to add to the kill count of a different peer to the one who died. We pick the peer by the function parameter, which is the ID of the last peer who hit them."
 						},
@@ -3186,6 +3092,58 @@
 							"conditions": [],
 							"actions": [],
 							"sid": 909930982147083
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 731067123298747
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyFamily",
+									"sid": 508577564446404,
+									"parameters": {
+										"instance-variable": "mirror",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyFamily",
+									"sid": 370223004317648,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 591092661389316
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 830864662120201
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "EnemyFamily",
+									"sid": 204329642173138,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 320133815224262
 						}
 					],
 					"sid": 5870562097836775
