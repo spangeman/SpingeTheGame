@@ -43,7 +43,7 @@ export class ArenaRoom extends Room<State> {
       entity.uniqueid = message.uniqueid;
       entity.displayname = message.displayname;
       
-      console.log("Hello there!!!");
+      console.log("Hello there!!!!");
       
       console.log(entity.displayname);
 
