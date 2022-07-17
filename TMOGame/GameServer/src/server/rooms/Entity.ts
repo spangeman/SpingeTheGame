@@ -3,8 +3,11 @@ import { Schema, type } from "@colyseus/schema";
 export class Entity extends Schema {
     @type("float64") x!: number;
     @type("float64") y!: number;
+    @type("float64") colourr!: number;
+    @type("float64") colourg!: number;
+    @type("float64") colourb!: number;
     @type("string") uniqueid!: string;
-    @type("string") displayname!: string;
+    @type("string") username!: string;
     dead: boolean = false;
 
     static distance(a: Entity, b: Entity) {

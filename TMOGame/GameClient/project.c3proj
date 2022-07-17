@@ -163,6 +163,13 @@
 				],
 				"subfolders": [],
 				"name": "LoginStuff"
+			},
+			{
+				"items": [
+					"InfoNameLabel"
+				],
+				"subfolders": [],
+				"name": "InfoArea"
 			}
 		]
 	},

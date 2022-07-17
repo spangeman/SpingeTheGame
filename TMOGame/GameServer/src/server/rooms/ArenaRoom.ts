@@ -13,7 +13,7 @@ export class ArenaRoom extends Room<State> {
     this.setState(new State());
     this.state.initialize();
 
-    this.onMessage("mouse", (client, messageString) => {
+    this.onMessage("updatePlayerPosition", (client, messageString) => {
       const message = JSON.parse(messageString)
       const entity = this.state.entities.get(client.sessionId);
 
@@ -40,20 +40,25 @@ export class ArenaRoom extends Room<State> {
         return;
       }
 
-      entity.uniqueid = message.uniqueid;
-      entity.displayname = message.displayname;
-      
-      console.log("Hello there!!!!");
-      
-      console.log(entity.displayname);
+      entity.username = message.username;
+
+      if(entity.username === "spange") {
+        entity.colourr = 220;
+        entity.colourg = 20;
+        entity.colourb = 60;
+      }
+      else {
+        entity.colourr = 25;
+        entity.colourg = 25;
+        entity.colourb = 112;
+      }
+
+
+
+      console.log("Logging in " + entity.username);
 
       // console.log(message, { speed: entity.speed, angle: entity.angle });
     });
-    
-    
-    
-    
-    
   }
 
   onJoin(client: Client, options: any) {
