@@ -716,7 +716,34 @@
 					}
 				}
 			],
-			"sid": 799792182108966
+			"sid": 799792182108966,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 415006098371939,
+							"parameters": {
+								"instance-variable": "IsLocalPlayer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Player",
+							"sid": 791418107549198,
+							"parameters": {
+								"x": "20",
+								"y": "20"
+							}
+						}
+					],
+					"sid": 545799715343983
+				}
+			]
 		}
 	],
 	"sid": 574029870586155
