@@ -1,0 +1,8 @@
+{
+	"name": "LoginInputUsername",
+	"plugin-id": "TextBox",
+	"sid": 239336786814089,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

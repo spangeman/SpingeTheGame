@@ -1,0 +1,56 @@
+{
+	"name": "Camera",
+	"plugin-id": "Sprite",
+	"sid": 378527408222416,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "mouseX",
+			"type": "number",
+			"desc": "",
+			"sid": 928587219612076
+		},
+		{
+			"name": "mouseY",
+			"type": "number",
+			"desc": "",
+			"sid": 833534933829304
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 904463950610232
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 0,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 593822321671795,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

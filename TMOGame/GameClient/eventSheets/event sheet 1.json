@@ -1,0 +1,735 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "serverURI",
+			"type": "string",
+			"initialValue": "ws://localhost:2567/",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 955055223745607
+		},
+		{
+			"eventType": "variable",
+			"name": "roomName",
+			"type": "string",
+			"initialValue": "arena",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 230069358263389
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerUniqueId",
+			"type": "string",
+			"initialValue": "srtherthdfghsgsg",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 474434627380442
+		},
+		{
+			"eventType": "variable",
+			"name": "PlayerDisplayName",
+			"type": "string",
+			"initialValue": "Spange",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 943309871314996
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentPlayerSessionID",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 117995057796396
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 442756639706192
+				}
+			],
+			"actions": [
+				{
+					"id": "set-endpoint",
+					"objectClass": "Colyseus",
+					"sid": 985156214385278,
+					"parameters": {
+						"endpoint": "serverURI"
+					}
+				},
+				{
+					"id": "get-available-rooms",
+					"objectClass": "Colyseus",
+					"sid": 214141797606883,
+					"parameters": {
+						"name": "\"arena\""
+					}
+				},
+				{
+					"id": "join-or-create-room",
+					"objectClass": "Colyseus",
+					"sid": 931659772954050,
+					"parameters": {
+						"name": "roomName",
+						"options": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 510244954317975,
+					"parameters": {
+						"object-to-create": "Camera",
+						"layer": "0",
+						"x": "0",
+						"y": "4000",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 363022095972133
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-get-available-rooms",
+					"objectClass": "Colyseus",
+					"sid": 139759319112433
+				}
+			],
+			"actions": [
+				{
+					"id": "parse",
+					"objectClass": "Rooms",
+					"sid": 825581227183131,
+					"parameters": {
+						"data": "Colyseus.CurrentValue"
+					}
+				},
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 497007928899801,
+					"parameters": {
+						"type": "log",
+						"message": "\"JSON value: \"&Rooms.ToCompactString"
+					}
+				}
+			],
+			"sid": 264903631852465,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "Rooms",
+							"sid": 862203577368765,
+							"parameters": {
+								"path": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 381203213685572,
+							"parameters": {
+								"type": "log",
+								"message": "\"RoomId: \"&Rooms.Get(\".roomId\")&\", Clients: \"&Rooms.Get(\".clients\")"
+							}
+						}
+					],
+					"sid": 823884806265275
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-join-room",
+					"objectClass": "Colyseus",
+					"sid": 135523607805141
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 761033451654558,
+					"disabled": true,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "room-send",
+					"objectClass": "Colyseus",
+					"sid": 618620707847864,
+					"disabled": true,
+					"parameters": {
+						"type": "\"logplayerin\"",
+						"message": "Colyseus.JSON(\"{x:\"&Player.X & \",y:\" & Player.Y & \",uniqueid:\" & PlayerUniqueId & \",displayname:\" & PlayerDisplayName & \"}\")"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 824499698090690,
+					"disabled": true,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 687716523816439,
+					"parameters": {
+						"group-name": "\"Core Loop\"",
+						"state": "activated"
+					}
+				}
+			],
+			"sid": 653048919207964
+		},
+		{
+			"eventType": "comment",
+			"text": "Change back to on error"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-error",
+					"objectClass": "Colyseus",
+					"sid": 237458922145558
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "alert(\"Unable to connect to Room: ''\"+runtime.globalVars.roomName+\"'' at: ''\"+runtime.globalVars.serverURI+\"''\")"
+				},
+				{
+					"id": "log",
+					"objectClass": "Browser",
+					"sid": 817167686795189,
+					"parameters": {
+						"type": "error",
+						"message": "\"***ERR*** Colyseus:\"&\"(\"&Colyseus.ErrorCode&\") \"&Colyseus.ErrorMessage"
+					}
+				}
+			],
+			"sid": 203764642223897
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Core Loop",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "schema-item-add",
+							"objectClass": "Colyseus",
+							"sid": 334387241701945,
+							"parameters": {
+								"path": "\"entities\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "room-send-json",
+							"objectClass": "Colyseus",
+							"sid": 531000441384633,
+							"disabled": true,
+							"parameters": {
+								"type": "\"login\"",
+								"message": "Colyseus.JSON(\"{x:\"&Player.X & \",y:\" & Player.Y & \",uniqueid:\" & \"'\" & PlayerUniqueId & \"'\" & \",displayname:\" & \"'\" & PlayerDisplayName & \"'\" & \"}\")"
+							}
+						}
+					],
+					"sid": 202473809767478,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "schema-is-index",
+									"objectClass": "Colyseus",
+									"sid": 896257780610222,
+									"parameters": {
+										"index": "Colyseus.SessionId"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "Stuff for local player here"
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TextAreaSessionID",
+									"sid": 110940661395134,
+									"parameters": {
+										"text": "Colyseus.SessionId"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 345634789132914,
+									"parameters": {
+										"variable": "CurrentPlayerSessionID",
+										"value": "Colyseus.SessionId"
+									}
+								}
+							],
+							"sid": 143718095959774
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 244295691791632
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 532965009486970,
+									"parameters": {
+										"object-to-create": "Player",
+										"layer": "0",
+										"x": "Colyseus.CurrentValueAt(\"x\")",
+										"y": "Colyseus.CurrentValueAt(\"y\")",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player",
+									"sid": 672194218767205,
+									"parameters": {
+										"instance-variable": "IsLocalPlayer",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-default-controls",
+									"objectClass": "Player",
+									"sid": 466454544067117,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"default-controls": false
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player",
+									"sid": 143733907734882,
+									"behaviorType": "8Direction",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "DictionaryOfEntities",
+									"sid": 556795683690881,
+									"parameters": {
+										"key": "Colyseus.CurrentIndex",
+										"value": "Player.UID"
+									}
+								}
+							],
+							"sid": 851271807707894
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "schema-item-remove",
+							"objectClass": "Colyseus",
+							"sid": 783161244571019,
+							"parameters": {
+								"path": "\"entities\""
+							}
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Player",
+							"sid": 657846576435410,
+							"parameters": {
+								"unique-id": "DictionaryOfEntities.Get(Colyseus.CurrentIndex)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Player",
+							"sid": 564346585136949
+						}
+					],
+					"sid": 214672382159133
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 218101606034081
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 612399865246524,
+							"parameters": {
+								"instance-variable": "IsLocalPlayer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "room-send",
+							"objectClass": "Colyseus",
+							"sid": 408624298230427,
+							"parameters": {
+								"type": "\"mouse\"",
+								"message": "Colyseus.JSON(\"{x:\"&Player.X & \",y:\" & Player.Y & \"}\")"
+							}
+						}
+					],
+					"sid": 931929559903145,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 167643228693134
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each-key",
+							"objectClass": "DictionaryOfEntities",
+							"sid": 392181335778655
+						},
+						{
+							"id": "is-empty",
+							"objectClass": "DictionaryOfEntities",
+							"sid": 191129431318165,
+							"isInverted": true
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Player",
+							"sid": 732775909487670,
+							"parameters": {
+								"unique-id": "DictionaryOfEntities.CurrentValue"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Player",
+							"sid": 547828891455084,
+							"parameters": {
+								"x": "lerp(Player.X, Colyseus.State(\"entities.\" & DictionaryOfEntities.CurrentKey & \".x\"), 0.1)",
+								"y": "lerp(Player.Y, Colyseus.State(\"entities.\" & DictionaryOfEntities.CurrentKey & \".y\"), 0.1)"
+							}
+						},
+						{
+							"id": "append-text",
+							"objectClass": "AlertText",
+							"sid": 966415182887043,
+							"disabled": true,
+							"parameters": {
+								"text": "DictionaryOfEntities.CurrentKey& \"|\""
+							}
+						}
+					],
+					"sid": 288750318367442,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 352797452608534
+						}
+					]
+				}
+			],
+			"sid": 984040685641200
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 802884406976582,
+					"parameters": {
+						"key": 65
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 873479964812205,
+					"parameters": {
+						"instance-variable": "IsLocalPlayer"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 282109173463789,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 655263390892671
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 245322189609378,
+					"parameters": {
+						"key": 68
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 820631996104708,
+					"parameters": {
+						"instance-variable": "IsLocalPlayer"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 381455696079613,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 573924429187656
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 199987335939555,
+					"parameters": {
+						"key": 83
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 721801157999939,
+					"parameters": {
+						"instance-variable": "IsLocalPlayer"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 447854026871917,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 676802207606678
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 321597715701982,
+					"parameters": {
+						"key": 87
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player",
+					"sid": 445000041786909,
+					"parameters": {
+						"instance-variable": "IsLocalPlayer"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 392169181219390,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 435532037953934
+		},
+		{
+			"eventType": "comment",
+			"text": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+		},
+		{
+			"eventType": "comment",
+			"text": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+		},
+		{
+			"eventType": "comment",
+			"text": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+		},
+		{
+			"eventType": "comment",
+			"text": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+		},
+		{
+			"eventType": "comment",
+			"text": "blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah "
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "TestButton",
+					"sid": 154480059233016
+				}
+			],
+			"actions": [
+				{
+					"id": "room-send",
+					"objectClass": "Colyseus",
+					"sid": 293184059622251,
+					"parameters": {
+						"type": "ActionName.Text",
+						"message": "Colyseus.JSON(TestInput.Text)"
+					}
+				},
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 899168024499856,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"type": "script",
+					"script": "console.log(\"Send something\")"
+				}
+			],
+			"sid": 371121071608997
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "ReceiveButton",
+					"sid": 883054812469914
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "console.log(\"Get something\")"
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TestOutputResults",
+					"sid": 803477478448942,
+					"parameters": {
+						"text": "Colyseus.State(TestOutputInputText.Text)"
+					}
+				}
+			],
+			"sid": 227843952428897
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "LoginButton",
+					"sid": 475663219490304
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Camera",
+					"sid": 468407946025920,
+					"parameters": {
+						"x": "0",
+						"y": "0"
+					}
+				}
+			],
+			"sid": 799792182108966
+		}
+	],
+	"sid": 574029870586155
+}
