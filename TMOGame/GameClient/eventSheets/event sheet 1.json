@@ -295,6 +295,14 @@
 									}
 								},
 								{
+									"id": "set-default-color",
+									"objectClass": "Player",
+									"sid": 900636566399761,
+									"parameters": {
+										"color": "rgbEx(55,55,55)"
+									}
+								},
+								{
 									"id": "set-boolean-instvar",
 									"objectClass": "Player",
 									"sid": 672194218767205,
